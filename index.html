@@ -251,8 +251,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisite" title="Pre-requisite" class="md-nav__link">
-    Pre-requisite
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
   </a>
   
 </li>
@@ -728,8 +728,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisite" title="Pre-requisite" class="md-nav__link">
-    Pre-requisite
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
   </a>
   
 </li>
@@ -809,7 +809,7 @@
                 
                 
                 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<h2 id="pre-requisite">Pre-requisite<a class="headerlink" href="#pre-requisite" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://git-scm.com/downloads">git</a></li>
 <li><a href="https://nodejs.org/dist/latest-v10.x/">node.js v10</a></li>
@@ -823,23 +823,24 @@ cd MPS
 
 
 <h3 id="2addmodify-configjson">2.Add/modify config.json<a class="headerlink" href="#2addmodify-configjson" title="Permanent link">&para;</a></h3>
-<p>create config.json file in <em>private</em> folder under MPS_microservice. These following parameters can be configured.</p>
+<p>create config.json file in the <em>private</em> folder within MPS directory. These following parameters can be configured.</p>
 <ul>
-<li><em>usewhitelist</em> - set true to whitelist the GUIDs stored in guids.json.</li>
-<li><em>commonName</em> - used in self signed certificate can be either FQDN or IP address.</li>
-<li><em>useglobalmpscredentials</em> - set to true, such that any device using global <em>mpsusername</em> and  <em>mpspass</em> are allowed to connect. </li>
-<li><em>https</em> - set to true to enable TLS. </li>
+<li><em>usewhitelist</em> - set to true to whitelist AMT GUIDs stored in guids.json.</li>
+<li><em>commonName</em> - used in self signed certificate, can be either FQDN or IP address.</li>
+<li><em>useglobalmpscredentials</em> - When set to true, any device using <em>mpsusername</em> and  <em>mpspass</em> in config.json are allowed to connect. When set to false, MPS validates credentials sent by AMT device using credentials.json.</li>
+<li><em>https</em> - set to true to enable TLS on HTTP server. </li>
 <li><em>mpstlsoffload</em> - set to true to run MPS without TLS. </li>
-<li><em>generateCertificates</em> - Generates certificates automatically. SSL and Root cert are generated and stored in private folder when set to true.</li>
-<li><em>loggeroff</em> - Set to true to turnoff logs. By default, they are turnon.</li>
+<li><em>generateCertificates</em> - Generates certificates automatically. When set to true, SSL and Root cert are generated and stored in private folder.</li>
+<li><em>loggeroff</em> - set to true to disable logging. Logging is enabled by default.”.</li>
+<li><em>webport</em> - Port used by WebServer (or HTTP server)</li>
 </ul>
 <p>For example:</p>
 <div class="codehilite"><pre><span></span>    <span class="p p-Indicator">{</span>
         <span class="s">&quot;usewhitelist&quot;</span><span class="nt"> </span><span class="p">:</span> <span class="nv">false</span><span class="p p-Indicator">,</span>
-        <span class="s">&quot;commonName&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;127.0.0.1&quot;</span><span class="p p-Indicator">,</span>
+        <span class="s">&quot;commonName&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;iot-demosetup.lab.local.com&quot;</span><span class="p p-Indicator">,</span>
         <span class="s">&quot;mpsport&quot;</span><span class="p p-Indicator">:</span> <span class="nv">4433</span><span class="p p-Indicator">,</span>
         <span class="s">&quot;mpsusername&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;standalone&quot;</span><span class="p p-Indicator">,</span> 
-        <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;P@ssw0rd&quot;</span><span class="p p-Indicator">,</span> 
+        <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span><span class="p p-Indicator">,</span> 
         <span class="s">&quot;useglobalmpscredentials&quot;</span><span class="p p-Indicator">:</span> <span class="nv">true</span><span class="p p-Indicator">,</span>
         <span class="s">&quot;country&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;US&quot;</span><span class="p p-Indicator">,</span>
         <span class="s">&quot;company&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;NoCorp&quot;</span><span class="p p-Indicator">,</span>
@@ -855,9 +856,17 @@ cd MPS
 
 
 <h3 id="3addmodify-credentialsjson">3.Add/modify credentials.json<a class="headerlink" href="#3addmodify-credentialsjson" title="Permanent link">&para;</a></h3>
-<p>Create credentials.json file in <em>private</em> folder. This file is used to simulate credential storage.</p>
+<p>Create credentials.json file in <em>private</em> folder within MPS directory. This file is used to simulate credential storage.</p>
+<ul>
+<li><em>AMT GUID</em> - Each AMT device has a unique identifier (GUID) assigned to it by default. This GUID will be used as the reference to each device record.</li>
+<li><em>name</em> - AMT hostname or user friendly identifier</li>
+<li><em>mpsuser</em> - AMT Device uses this as the user name while connecting to MPS</li>
+<li><em>mpspass</em> - AMT Device uses this as the password while connecting to MPS</li>
+<li><em>amtuser</em> - MPS uses this as the AMT user name when making AMT API calls (WSMAN or Redirection)</li>
+<li><em>amtpass</em> - MPS uses this as the AMT password when making AMT API calls (WSMAN or Redirection)</li>
+</ul>
 <div class="admonition info">
-<p class="admonition-title">Add new device<p>MPS user name and password are required to connect to MPS server. Where as, AMT user name and password are required whenever a request is made to ME.</p>
+<p class="admonition-title">AMT and MPS password security recommendation<p>Intel highly recommends that you don't use same password for MPS and AMT. An example strong password would contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least eight characters.</p>
 </p>
 </div>
 <p>For example:</p>
@@ -865,36 +874,36 @@ cd MPS
         <span class="s">&quot;8dad96cb-c3db-11e6-9c43-bc0000d20000&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span> 
             <span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Win7-machine&quot;</span><span class="p p-Indicator">,</span> 
             <span class="s">&quot;mpsuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;standalone&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;P@ssw0rd&quot;</span><span class="p p-Indicator">,</span> 
+            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span><span class="p p-Indicator">,</span> 
             <span class="s">&quot;amtuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span><span class="p p-Indicator">,</span> 
-            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;P@ssw0rd&quot;</span> 
+            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span> 
         <span class="p p-Indicator">},</span>
         <span class="s">&quot;bf49cf00-9164-11e4-952b-b8aeed7ec594&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
             <span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Ubuntu-machine&quot;</span><span class="p p-Indicator">,</span>
             <span class="s">&quot;mpsuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;xenial&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;P@ssw0rd&quot;</span><span class="p p-Indicator">,</span>
+            <span class="s">&quot;mpspass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span><span class="p p-Indicator">,</span>
             <span class="s">&quot;amtuser&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span><span class="p p-Indicator">,</span>
-            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;P@ssw0rd&quot;</span>
+            <span class="s">&quot;amtpass&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;G@ppm0ym&quot;</span>
         <span class="p p-Indicator">}</span>
     <span class="p p-Indicator">}</span>
 </pre></div>
 
 
 <h3 id="4addmodify-guidsjson">4.Add/modify guids.json<a class="headerlink" href="#4addmodify-guidsjson" title="Permanent link">&para;</a></h3>
-<p>If <em>usewhitelist</em> is set to <em>true</em> in config.json file, add guids.json file in <em>private</em> folder to whitelist guids that are allowed to connect to MPS. This file is used to simulate whitelisting based on GUID's.</p>
+<p>If <em>usewhitelist</em> is set to <em>true</em> in config.json file, add guids.json file in <em>private</em> folder to whitelist AMT GUID's that are allowed to connect to MPS. Use guids.json.sample as an example to create the guids.json and populate it with guids for whitelisting. This file is used to simulate whitelisting based on AMT GUID's.</p>
 <p>For example:</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">[</span><span class="s">&quot;8dad96cb-c3db-11e6-9c43-bc0000d20000&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;12345678-9abc-def1-2345-123456789000&quot;</span><span class="p p-Indicator">]</span>
 </pre></div>
 
 
 <h3 id="5start-the-server">5.Start the server<a class="headerlink" href="#5start-the-server" title="Permanent link">&para;</a></h3>
-<p>Browse to MPS_microservice root folder</p>
+<p>Browse to MPS root folder</p>
 <div class="codehilite"><pre><span></span><span class="nx">npm</span> <span class="nx">install</span>
 <span class="nx">npm</span> <span class="nx">start</span>
 </pre></div>
 
 
-<p>This will install all the dependencies and start the server. Webserver runs on port 3000 by default and MPS Server listens on port 4433.
+<p>This will install all the dependencies and start the server. Webserver (or HTTPS server) runs on port 3000 by default and MPS Server listens on port 4433.
 Certificates are generated and stored in private folder.</p>
 <p><a href="assets/images/MPS_npminstall.PNG"><img alt="mps" src="assets/images/MPS_npminstall.PNG" /></a></p>
 <h3 id="6-connect-an-amt-device">6. Connect an AMT device<a class="headerlink" href="#6-connect-an-amt-device" title="Permanent link">&para;</a></h3>
@@ -903,19 +912,24 @@ Certificates are generated and stored in private folder.</p>
 <p>Make sure the device is connected to internet.</p>
 </li>
 <li>
-<p>From the device browse to MPS server to Download MEScript.</p>
+<p>On the device, browse to MPS server (Example URL: https://iot-demosetup.lab.local.com:3000) and click on Download MESCRIPT. This will download cira_setup.mescript file.</p>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">MEScript</p>
+<p>MEScript files are used by MeshCMD to execute a series of actions on the AMT device. </p>
+</div>
 <p><a href="assets/images/MPS_DownloadMEScript.PNG"><img alt="mps" src="assets/images/MPS_DownloadMEScript.PNG" /></a></p>
 <ul>
-<li>Next, download MeshCmd from <a href="https://www.meshcommander.com/meshcommander/meshcmd">site</a> appropriate to device platform.</li>
+<li>Next, download MeshCMD suitable to your device platform from <a href="https://www.meshcommander.com/meshcommander/meshcmd">site</a>.</li>
 </ul>
 <p><a href="assets/images/MPS_MeshCommander.PNG"><img alt="mps" src="assets/images/MPS_MeshCommander.PNG" /></a></p>
 <ul>
-<li>From the folder where MEScript and MeshCmd downloaded, open Cli, run the command the below command. This runs a script that does all the configuration required for CIRA setup.<ol>
-<li>Adds root certificate to trust MPS Server.</li>
-<li>Sets periodic connection to MPS.</li>
-<li>Enables environment detection.</li>
+<li>Browse to the folder where MEScript and MeshCMD are downloaded. Open Cli, run the below command. This runs a script that does all the configuration required for CIRA setup.<ol>
+<li>Specifies the root certificate that the Firmware (ME) should use for TLS negotiation.</li>
+<li>Specifies the login credentials that the Firmware should use when connecting to MPS.</li>
+<li>Specifies the periodic connection time the Firmware should use to maintain MPS connection.</li>
+<li>Specifies the home domain suffix used to enable environment detection (When device is outside the home domain, AMT uses CIRA to connect to MPS).</li>
 </ol>
 </li>
 </ul>
@@ -929,7 +943,7 @@ Certificates are generated and stored in private folder.</p>
 <p><a href="assets/images/MPS_DeviceOnline.PNG"><img alt="mps" src="assets/images/MPS_DeviceOnline.PNG" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Device credentials</p>
-<p>Make sure that AMT guid entry is present in credential file of server. Also in guids.json file if usewhitelist is set to true in config file.</p>
+<p>Make sure that AMT guid entry is present in credential.json file. Also in guids.json file if <em>usewhitelist</em> is set to <em>true</em> in config.json file.</p>
 </div>
                 
                   
