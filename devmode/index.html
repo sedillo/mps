@@ -38,7 +38,7 @@
     
     
       
-        <title>API - MPS Service</title>
+        <title>Developer mode - MPS Service</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#server" tabindex="1" class="md-skip">
+      <a href="#developer-mode" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                API
+                Developer mode
               
             </span>
           
@@ -202,20 +202,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="API" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../api/" title="API" class="md-nav__link">
       API
     </a>
-    
   </li>
 
     
@@ -608,6 +599,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" title="Intro" class="md-nav__link">
+    Intro
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mps" title="MPS" class="md-nav__link">
+    MPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rps" title="RPS" class="md-nav__link">
+    RPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#env-setting" title=".env setting" class="md-nav__link">
+    .env setting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -619,109 +653,43 @@
               
                 
                 
-                <h1 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="nt">url</span><span class="p">:</span> <span class="s">&#39;{protocol}://{host}:{port}&#39;</span>
-<span class="nt">variables</span><span class="p">:</span>
-  <span class="nt">protocol</span><span class="p">:</span>
-    <span class="nt">enum</span><span class="p">:</span> 
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https</span>
-      <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https</span>
-    <span class="nt">host</span><span class="p">:</span>
-      <span class="nt">default</span><span class="p">:</span> <span class="s">&#39;localhost&#39;</span>
-    <span class="nt">port</span><span class="p">:</span>
-      <span class="nt">enum</span><span class="p">:</span> 
-        <span class="p p-Indicator">-</span> <span class="s">&#39;3000&#39;</span>
-        <span class="nt">default</span><span class="p">:</span> <span class="s">&#39;3000&#39;</span>
+                <h1 id="developer-mode">Developer mode<a class="headerlink" href="#developer-mode" title="Permanent link">&para;</a></h1>
+<h2 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>Developer mode disables database and vault external dependencies and instead uses local flat files for device credentials, domains and profiles. When the Developer mode switch is set to true, vault and database options are turned off regardless of configuration.
 </pre></div>
 
 
-<h1 id="rest-api">REST API<a class="headerlink" href="#rest-api" title="Permanent link">&para;</a></h1>
-<h2 id="base-path">Base path<a class="headerlink" href="#base-path" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">/amt/</span>
-<span class="l l-Scalar l-Scalar-Plain">/admin/</span>
+<h3 id="mps">MPS<a class="headerlink" href="#mps" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>- Config.json option:
+    - &quot;Usevault&quot; 
+          - true - store device credentials in vault.
+          - false - store device credentials in json file configured in &quot;credentialspath&quot;.
+    - &quot;developermode&quot; 
+          - true - forces &quot;Usevault&quot; to false.
+          - false - no affect.
 </pre></div>
 
 
-<h3 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>url: https://localhost:3000/amt
+<h3 id="rps">RPS<a class="headerlink" href="#rps" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>- app.config.dev.json options:
+    - &quot;VaultConfig:usevault&quot;
+          - true - stores device credentials, as well as domain and profile passwords in vault.
+          - false - store device credentials in json file.
+    - &quot;DbConfig:useDbForConfig&quot;  
+          - true - stores domain and profile information in the database.
+          - false - store profile and domain information in app.config.dev.json and device credentials in json file referred in config option &quot;credentialspath&quot;.
+    - &quot;Devmode&quot; 
+          - true - forces &quot;VaultConfig:usevault&quot; and &quot;DbConfig:useDbForConfig&quot; to false.
+          - false - no affect.
 </pre></div>
 
 
-<h2 id="http-method">HTTP Method<a class="headerlink" href="#http-method" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">POST</span>
-</pre></div>
-
-
-<h2 id="request-body">Request body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h2>
-<p>Method in the request body tells the action that can be performed on the client device. Payload will vary with each method and by default contains the guid of the client details.
-Click <a href="../methods/auditlog/">here</a> to find the currently supported methods and examples in detail.</p>
-<div class="codehilite"><pre><span></span><span class="nt">requestBody</span><span class="p">:</span>
-    <span class="nt">content</span><span class="p">:</span>
-      <span class="nt">application/json</span><span class="p">:</span>
-        <span class="nt">schema</span><span class="p">:</span>
-           <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
-            <span class="l l-Scalar l-Scalar-Plain">properties</span><span class="p p-Indicator">:</span>
-            <span class="nt">apiKey</span><span class="p">:</span>          
-              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
-            <span class="nt">method</span><span class="p">:</span>          
-              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
-            <span class="nt">payload</span><span class="p">:</span>
-               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
-            <span class="nt">required</span><span class="p">:</span>
-                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apiKey</span>
-                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">method</span>
-                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">payload</span>
-</pre></div>
-
-
-<h2 id="response-body">Response body<a class="headerlink" href="#response-body" title="Permanent link">&para;</a></h2>
-<p>Success response would vary with each method that is requested. Below is the generic pattern for the error codes.</p>
-<div class="codehilite"><pre><span></span><span class="nt">response</span><span class="p">:</span>
-    <span class="nt">content</span><span class="p">:</span>
-       <span class="nt">application/json; charset=utf-8</span><span class="p">:</span>
-         <span class="nt">schema</span><span class="p">:</span>
-           <span class="nt">properties</span><span class="p">:</span>
-             <span class="nt">status</span><span class="p">:</span>              
-               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">number</span>
-             <span class="nt">error</span><span class="p">:</span>
-               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
-</pre></div>
-
-
-<p>Click <a href="methods\types.md">here</a> for supported input and output types.</p>
-<p>Example Value</p>
-<div class="codehilite"><pre><span></span><span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;ResponseBody&quot;</span><span class="p p-Indicator">:</span> <span class="nv">responseBody</span>
-    <span class="p p-Indicator">}</span>
-<span class="s">&#39;400&#39;</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;status&quot;</span><span class="p p-Indicator">:</span> <span class="nv">400</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;error&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Request</span><span class="nv"> </span><span class="s">missing</span><span class="nv"> </span><span class="s">amt</span><span class="nv"> </span><span class="s">guid&quot;</span>
-    <span class="p p-Indicator">}</span>
-<span class="s">&#39;404&#39;</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;status&quot;</span><span class="p p-Indicator">:</span> <span class="nv">404</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;error&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Device</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found/connected.</span><span class="nv"> </span><span class="s">Please</span><span class="nv"> </span><span class="s">connect</span><span class="nv"> </span><span class="s">again</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">CIRA&quot;</span>
-    <span class="p p-Indicator">}</span>
-<span class="s">&#39;408&#39;</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;status&quot;</span><span class="p p-Indicator">:</span> <span class="nv">408</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;error&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Timeout</span><span class="nv"> </span><span class="s">error&quot;</span>
-    <span class="p p-Indicator">}</span>
-<span class="s">&#39;500&#39;</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;status&quot;</span><span class="p p-Indicator">:</span> <span class="nv">500</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;error&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Internal</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">error&quot;</span>
-    <span class="p p-Indicator">}</span>
-</pre></div>
-
-
-<h1 id="websocket">WebSocket<a class="headerlink" href="#websocket" title="Permanent link">&para;</a></h1>
-<h2 id="base-path_1">Base path<a class="headerlink" href="#base-path_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">/relay/</span>
-<span class="l l-Scalar l-Scalar-Plain">/notifications/</span>
+<h3 id="env-setting">.env setting<a class="headerlink" href="#env-setting" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>- &quot;DEVELOPER_MODE&quot; - enables developer mode for mps and rps.
+- &quot;USEVAULT&quot; - enables vault use in mps and rps.
+- &quot;USE_DB_PROFILES&quot; - rps stores domains and profiles in database. Note: when &quot;USEVAULT&quot; is set to true, passwords are stored in vault for domains and profiles.
+- &quot;RPS_CREDENTIALS_PATH&quot; - rps path for json credential file for device credentials.
+- &quot;CREDENTIALS_PATH&quot; - mps path for json credential file for device credentials.
 </pre></div>
                 
                   
@@ -739,41 +707,6 @@ Click <a href="../methods/auditlog/">here</a> to find the currently supported me
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href=".." title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Getting started
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../methods/alldevices/" title="All Devices" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                All Devices
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
