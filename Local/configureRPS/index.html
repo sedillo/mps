@@ -1,66 +1,42 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
     
     
       
-        <title>Configure RPS - ActivEdge</title>
+        <title>Configure RPS - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.6a5ad368.min.css">
       
       
         
         
-        <meta name="theme-color" content="#03a9f4">
+        <meta name="theme-color" content="#02a6f2">
       
     
-    
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -69,71 +45,76 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#configure-rps" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure-rps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="ActivEdge" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              ActivEdge
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Configure RPS
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-header-nav__button md-logo" aria-label="ActivEdge: Smart Building Blocks for Remote Edge Management">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ActivEdge: Smart Building Blocks for Remote Edge Management
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Configure RPS
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -141,33 +122,34 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="ActivEdge" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-nav__button md-logo" aria-label="ActivEdge: Smart Building Blocks for Remote Edge Management">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
-    ActivEdge
+    ActivEdge: Smart Building Blocks for Remote Edge Management
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -191,13 +173,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Get Started with Microservices Locally
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Get Started with Microservices Locally" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Get Started with Microservices Locally
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -246,13 +230,12 @@
 
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Configure RPS
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" title="Configure RPS" class="md-nav__link md-nav__link--active">
@@ -260,40 +243,49 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-in-to-the-https-web-server" title="Logging in to the HTTPS Web Server" class="md-nav__link">
+  <a href="#configure-rps" class="md-nav__link">
+    Configure RPS
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure RPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in-to-the-https-web-server" class="md-nav__link">
     Logging in to the HTTPS Web Server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#add-cira-configuration-and-profile-to-rps" title="Add CIRA Configuration and Profile to RPS" class="md-nav__link">
-    Add CIRA Configuration and Profile to RPS
+        
+          <li class="md-nav__item">
+  <a href="#adding-cira-configuration-and-profiles-to-rps" class="md-nav__link">
+    Adding CIRA Configuration and Profiles to RPS
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Adding CIRA Configuration and Profiles to RPS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-cira-config" title="Create a CIRA Config" class="md-nav__link">
-    Create a CIRA Config
+  <a href="#creating-a-cira-config" class="md-nav__link">
+    Creating a CIRA Config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-profile" title="Create a Profile" class="md-nav__link">
-    Create a Profile
+  <a href="#creating-a-profile" class="md-nav__link">
+    Creating a Profile
   </a>
   
 </li>
@@ -302,10 +294,11 @@
     </nav>
   
 </li>
-      
-      
-      
-      
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -352,13 +345,15 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Deploy Microservices with Docker*
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Deploy Microservices with Docker*" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         Deploy Microservices with Docker*
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -397,13 +392,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Configure RPS
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" title="Configure RPS" class="md-nav__link md-nav__link--active">
@@ -411,40 +405,49 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-in-to-the-https-web-server" title="Logging in to the HTTPS Web Server" class="md-nav__link">
+  <a href="#configure-rps" class="md-nav__link">
+    Configure RPS
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure RPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in-to-the-https-web-server" class="md-nav__link">
     Logging in to the HTTPS Web Server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#add-cira-configuration-and-profile-to-rps" title="Add CIRA Configuration and Profile to RPS" class="md-nav__link">
-    Add CIRA Configuration and Profile to RPS
+        
+          <li class="md-nav__item">
+  <a href="#adding-cira-configuration-and-profiles-to-rps" class="md-nav__link">
+    Adding CIRA Configuration and Profiles to RPS
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Adding CIRA Configuration and Profiles to RPS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-cira-config" title="Create a CIRA Config" class="md-nav__link">
-    Create a CIRA Config
+  <a href="#creating-a-cira-config" class="md-nav__link">
+    Creating a CIRA Config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-profile" title="Create a Profile" class="md-nav__link">
-    Create a Profile
+  <a href="#creating-a-profile" class="md-nav__link">
+    Creating a Profile
   </a>
   
 </li>
@@ -453,10 +456,11 @@
     </nav>
   
 </li>
-      
-      
-      
-      
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -501,13 +505,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Tutorials
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -579,8 +585,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/whitelist/" title="Using a Whitelist" class="md-nav__link">
-      Using a Whitelist
+    <a href="../../Tutorials/allowlist/" title="Using an Allowlist" class="md-nav__link">
+      Using an Allowlist
     </a>
   </li>
 
@@ -597,13 +603,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       APIs
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         APIs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -645,13 +653,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Topics
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Topics" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
         Topics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -757,40 +767,49 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-in-to-the-https-web-server" title="Logging in to the HTTPS Web Server" class="md-nav__link">
+  <a href="#configure-rps" class="md-nav__link">
+    Configure RPS
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure RPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in-to-the-https-web-server" class="md-nav__link">
     Logging in to the HTTPS Web Server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#add-cira-configuration-and-profile-to-rps" title="Add CIRA Configuration and Profile to RPS" class="md-nav__link">
-    Add CIRA Configuration and Profile to RPS
+        
+          <li class="md-nav__item">
+  <a href="#adding-cira-configuration-and-profiles-to-rps" class="md-nav__link">
+    Adding CIRA Configuration and Profiles to RPS
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Adding CIRA Configuration and Profiles to RPS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-cira-config" title="Create a CIRA Config" class="md-nav__link">
-    Create a CIRA Config
+  <a href="#creating-a-cira-config" class="md-nav__link">
+    Creating a CIRA Config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-profile" title="Create a Profile" class="md-nav__link">
-    Create a Profile
+  <a href="#creating-a-profile" class="md-nav__link">
+    Creating a Profile
   </a>
   
 </li>
@@ -799,10 +818,11 @@
     </nav>
   
 </li>
-      
-      
-      
-      
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -817,17 +837,22 @@
               
                 
                 
-                <h1 id="configure-rps">Configure RPS<a class="headerlink" href="#configure-rps" title="Permanent link">&para;</a></h1>
-<h2 id="logging-in-to-the-https-web-server">Logging in to the HTTPS Web Server<a class="headerlink" href="#logging-in-to-the-https-web-server" title="Permanent link">&para;</a></h2>
+                  
+                
+                
+                  <h1>Configure RPS</h1>
+                
+                <h2 id="configure-rps">Configure RPS<a class="headerlink" href="#configure-rps" title="Permanent link">&para;</a></h2>
+<h3 id="logging-in-to-the-https-web-server">Logging in to the HTTPS Web Server<a class="headerlink" href="#logging-in-to-the-https-web-server" title="Permanent link">&para;</a></h3>
 <p>1. Open Chrome* and navigate to the web server using your development device's IP address on port 3000.</p>
 <div class="codehilite"><pre><span></span><code>https://[Your-IP-Address]:3000
 </code></pre></div>
 
 
 <blockquote>
-<p><strong>Note:</strong> You must use an IP address to connect to the web server. Using <em>localhost</em> will not work.</p>
+<p><strong>Note:</strong> You must use an IP-Address to connect to the web server. Using <em>localhost</em> will not work.</p>
 </blockquote>
-<p>2. Log in with the <em>web_admin_user</em> and <em>web_admin_password</em> values set in the .mpsrc file. If you changed these parameters, enter your customized login, or use the defaults provided below.</p>
+<p>2. Log in with the <em>web_admin_user</em> and <em>web_admin_password</em> set in the .mpsrc file. If you changed these parameters, enter your customized login, or use the defaults provided below.</p>
 <p><strong>Default credentials:</strong></p>
 <table>
 <thead>
@@ -849,10 +874,10 @@
 </table>
 <p>3. Select Remote Provisioning Server.</p>
 <blockquote>
-<p><strong>Note:</strong> Until an Intel<sup>®</sup> AMT device connects to the MPS, the number of devices shown on the Management Presence Serveroption will remain at 0. When you configure a device, you will see a new, 'Disconnected' device.  Once you successfully activateand connect the device (using CIRA), you'll see it listed as a 'Connected' device.</p>
+<p><strong>Note:</strong> Until an Intel&reg; AMT device connects to the MPS, the number of devices shown on the Management Presence Serveroption will remain at 0. When you configure a device, you will see a new, 'Disconnected' device.  Once you successfully activateand connect the device (using CIRA), you'll see it listed as a 'Connected' device.</p>
 </blockquote>
-<h2 id="add-cira-configuration-and-profile-to-rps">Add CIRA Configuration and Profile to RPS<a class="headerlink" href="#add-cira-configuration-and-profile-to-rps" title="Permanent link">&para;</a></h2>
-<h3 id="create-a-cira-config">Create a CIRA Config<a class="headerlink" href="#create-a-cira-config" title="Permanent link">&para;</a></h3>
+<h3 id="adding-cira-configuration-and-profiles-to-rps">Adding CIRA Configuration and Profiles to RPS<a class="headerlink" href="#adding-cira-configuration-and-profiles-to-rps" title="Permanent link">&para;</a></h3>
+<h4 id="creating-a-cira-config">Creating a CIRA Config<a class="headerlink" href="#creating-a-cira-config" title="Permanent link">&para;</a></h4>
 <p>CIRA stands for Client Initiated Request Access.  It allows a CIRA-capable edge device to reach out and establish a persistent connection to the MPS server rather than the MPS server reaching to the edge device.  This enables access to edge devices that might be harder to reach behind things such as proxies/firewalls/etc.</p>
 <p>A CIRA configuration provides the Remote Provisioning Client (RPC) the required info to establish the edge device's CIRA connection to the MPS Server during the activation process.  </p>
 <p><br></p>
@@ -890,7 +915,7 @@
 <p>Example CIRA Config:</p>
 <p><a href="../../assets/images/RPS_CreateCIRAConfig.png"><img alt="RPS" src="../../assets/images/RPS_CreateCIRAConfig.png" /></a></p>
 <p><br></p>
-<h3 id="create-a-profile">Create a Profile<a class="headerlink" href="#create-a-profile" title="Permanent link">&para;</a></h3>
+<h4 id="creating-a-profile">Creating a Profile<a class="headerlink" href="#creating-a-profile" title="Permanent link">&para;</a></h4>
 <p>Profiles provide configuration information to the AMT Firmware during the activation process with the Remote Provisioning Client (RPC).  It sets the AMT Password, used to access the Intel MEBX (Management Engine BIOS Extension) on the device and during the AMT deactivation process.</p>
 <p>Profiles also distinguish between activating a device in Client Control Mode (CCM) or Admin Control Mode (ACM). In this guide, we will activate into Client Control Mode. For more information on Admin Control Mode and the differences, <a href="../../Tutorials/acmActivation/">click here</a>.</p>
 <div class="admonition note">
@@ -899,7 +924,7 @@
 </div>
 <p><br></p>
 <p>1. Select the Profiles tab from the menu on the left.</p>
-<p>2. Under the Profiles tab, click New in the top, right corner to create a profile.</p>
+<p>2. Under the Profiles tab, click New in the top-right corner to create a profile.</p>
 <p>3. Specify a Profile Name of your choice.</p>
 <p>4. Uncheck Generate Random Password.</p>
 <p>5. Provide a strong AMT Password. </p>
@@ -908,21 +933,20 @@
 <blockquote>
 <ul>
 <li>8 to 32 characters</li>
-<li>One uppercase, one lowercase, one numerical digit, and one special character</li>
+<li>One uppercase, one lowercase, one numerical digit, one special character</li>
 </ul>
 </blockquote>
 </blockquote>
 <p>6. Select the name of the CIRA Config you created previously from the drop-down menu.</p>
-<p>7. Under Activation, select 'ccmactivate' from the drop-down menu.</p>
+<p>7. Under Activation, select 'ccmactivate' from the dropdown menu.</p>
 <blockquote>
 <p><strong>Note:</strong> If you'd prefer to activate the device into ACM mode, click <a href="../../Tutorials/acmActivation/">here</a></p>
 </blockquote>
 <p>8. Click Create.</p>
 <p>Example Profile:</p>
 <p><a href="../../assets/images/RPS_CreateProfile.png"><img alt="RPS" src="../../assets/images/RPS_CreateProfile.png" /></a></p>
-<p>Click the <strong>Next</strong> link at the bottom right of the page to build RPC on a managed device.</p>
-                
-                  
+<p><br></p>
+<p>Next up: <a href="../buildRPC/">Build RPC on a Managed Device</a></p>
                 
               
               
@@ -939,34 +963,34 @@
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../Docker/dockerLocal/" title="Build Docker* Images" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../Docker/dockerLocal/" title="Build Docker* Images" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Build Docker* Images
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../buildRPC/" title="Build RPC on a Managed Device" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../buildRPC/" title="Build RPC on a Managed Device" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Build RPC on a Managed Device
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -977,11 +1001,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -990,9 +1013,18 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

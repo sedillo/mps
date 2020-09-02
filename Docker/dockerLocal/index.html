@@ -1,66 +1,42 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
     
     
       
-        <title>Build Docker* Images - ActivEdge</title>
+        <title>Build Docker* Images - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.6a5ad368.min.css">
       
       
         
         
-        <meta name="theme-color" content="#03a9f4">
+        <meta name="theme-color" content="#02a6f2">
       
     
-    
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -69,71 +45,76 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#build-and-deploy-docker-images-for-mps-and-rps-locally" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-and-deploy-docker-images-for-mps-and-rps-locally" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="ActivEdge" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              ActivEdge
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Build Docker* Images
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-header-nav__button md-logo" aria-label="ActivEdge: Smart Building Blocks for Remote Edge Management">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ActivEdge: Smart Building Blocks for Remote Edge Management
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Build Docker* Images
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -141,33 +122,34 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="ActivEdge" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ActivEdge: Smart Building Blocks for Remote Edge Management" class="md-nav__button md-logo" aria-label="ActivEdge: Smart Building Blocks for Remote Edge Management">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
-    ActivEdge
+    ActivEdge: Smart Building Blocks for Remote Edge Management
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -191,13 +173,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Get Started with Microservices Locally
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Get Started with Microservices Locally" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Get Started with Microservices Locally
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -289,13 +273,15 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Deploy Microservices with Docker*
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Deploy Microservices with Docker*" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         Deploy Microservices with Docker*
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -322,13 +308,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Build Docker* Images
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" title="Build Docker* Images" class="md-nav__link md-nav__link--active">
@@ -336,46 +323,42 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-do" title="What You'll Do" class="md-nav__link">
+  <a href="#what-youll-do" class="md-nav__link">
     What You'll Do
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-need" title="What You'll Need" class="md-nav__link">
-    What You'll Need
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clone-the-mps-and-rps-repositories" title="Clone the MPS and RPS Repositories" class="md-nav__link">
+  <a href="#clone-the-mps-and-rps-repositories" class="md-nav__link">
     Clone the MPS and RPS Repositories
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Clone the MPS and RPS Repositories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clone-mps" title="Clone MPS" class="md-nav__link">
+  <a href="#clone-mps" class="md-nav__link">
     Clone MPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#clone-rps" title="Clone RPS" class="md-nav__link">
+  <a href="#clone-rps" class="md-nav__link">
     Clone RPS
   </a>
   
@@ -387,29 +370,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-the-docker-images" title="Build the Docker Images" class="md-nav__link">
+  <a href="#build-the-docker-images" class="md-nav__link">
     Build the Docker Images
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Build the Docker Images">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-mps" title="Build MPS" class="md-nav__link">
+  <a href="#build-mps" class="md-nav__link">
     Build MPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-rps" title="Build RPS" class="md-nav__link">
+  <a href="#build-rps" class="md-nav__link">
     Build RPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-the-environment-variables" title="Set the Environment Variables" class="md-nav__link">
+  <a href="#set-the-environment-variables" class="md-nav__link">
     Set the Environment Variables
   </a>
   
@@ -421,29 +404,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-docker-compose" title="Run docker-compose" class="md-nav__link">
+  <a href="#run-docker-compose" class="md-nav__link">
     Run docker-compose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#temp-link-continue-configuration-here-httpsgithubimpcloudnetdanger-bayopenamtcloudtoolkit-docsblobmastergettingstartedmd" title="Temp Link: Continue Configuration Here: https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md" class="md-nav__link">
-    Temp Link: Continue Configuration Here: https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md
+  <a href="#check-logs" class="md-nav__link">
+    Check Logs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#begin-at-section-titled-configuring-the-rps-server" title="Begin at section titled: 'Configuring the RPS Server'" class="md-nav__link">
-    Begin at section titled: 'Configuring the RPS Server'
-  </a>
-  
-</li>
-      
-      
-      
-      
       
     </ul>
   
@@ -500,13 +472,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Tutorials
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -578,8 +552,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/whitelist/" title="Using a Whitelist" class="md-nav__link">
-      Using a Whitelist
+    <a href="../../Tutorials/allowlist/" title="Using an Allowlist" class="md-nav__link">
+      Using an Allowlist
     </a>
   </li>
 
@@ -596,13 +570,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       APIs
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         APIs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -644,13 +620,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Topics
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Topics" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
         Topics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -756,46 +734,42 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-do" title="What You'll Do" class="md-nav__link">
+  <a href="#what-youll-do" class="md-nav__link">
     What You'll Do
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-need" title="What You'll Need" class="md-nav__link">
-    What You'll Need
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clone-the-mps-and-rps-repositories" title="Clone the MPS and RPS Repositories" class="md-nav__link">
+  <a href="#clone-the-mps-and-rps-repositories" class="md-nav__link">
     Clone the MPS and RPS Repositories
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Clone the MPS and RPS Repositories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clone-mps" title="Clone MPS" class="md-nav__link">
+  <a href="#clone-mps" class="md-nav__link">
     Clone MPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#clone-rps" title="Clone RPS" class="md-nav__link">
+  <a href="#clone-rps" class="md-nav__link">
     Clone RPS
   </a>
   
@@ -807,29 +781,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-the-docker-images" title="Build the Docker Images" class="md-nav__link">
+  <a href="#build-the-docker-images" class="md-nav__link">
     Build the Docker Images
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Build the Docker Images">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-mps" title="Build MPS" class="md-nav__link">
+  <a href="#build-mps" class="md-nav__link">
     Build MPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-rps" title="Build RPS" class="md-nav__link">
+  <a href="#build-rps" class="md-nav__link">
     Build RPS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-the-environment-variables" title="Set the Environment Variables" class="md-nav__link">
+  <a href="#set-the-environment-variables" class="md-nav__link">
     Set the Environment Variables
   </a>
   
@@ -841,29 +815,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-docker-compose" title="Run docker-compose" class="md-nav__link">
+  <a href="#run-docker-compose" class="md-nav__link">
     Run docker-compose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#temp-link-continue-configuration-here-httpsgithubimpcloudnetdanger-bayopenamtcloudtoolkit-docsblobmastergettingstartedmd" title="Temp Link: Continue Configuration Here: https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md" class="md-nav__link">
-    Temp Link: Continue Configuration Here: https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md
+  <a href="#check-logs" class="md-nav__link">
+    Check Logs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#begin-at-section-titled-configuring-the-rps-server" title="Begin at section titled: 'Configuring the RPS Server'" class="md-nav__link">
-    Begin at section titled: 'Configuring the RPS Server'
-  </a>
-  
-</li>
-      
-      
-      
-      
       
     </ul>
   
@@ -878,70 +841,27 @@
               
                 
                 
+                  
+                
+                
                 <h1 id="build-and-deploy-docker-images-for-mps-and-rps-locally">Build and Deploy Docker* Images for MPS and RPS Locally<a class="headerlink" href="#build-and-deploy-docker-images-for-mps-and-rps-locally" title="Permanent link">&para;</a></h1>
 <p>Management Presence Server (MPS) and Remote Provisioning Server (RPS)  provide support for deploying the services as Docker* images, standardized packages containing an application's source code, libraries, environment, and dependencies. </p>
 <p>A Docker container is the instantiation of a Docker image as a virtualized unit that separates the application from the environment. Docker* containers start and run reliably, securely, and portably inside different environments, eliminating some of the usual problems that occur with software deployment on varying platforms. </p>
-<p>For more information about Docker images and containers, <a href="https://www.docker.com/resources/what-container">start here</a>.</p>
+<p>Get more information about Docker images and containers at <a href="https://www.docker.com/resources/what-container">Docker resources.</a></p>
 <h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
-<p>This tutorial describes how to deploy MPS and RPS as Docker* images on the development system:</p>
+<p>This section describes how to deploy MPS and RPS as Docker* images on the development system:</p>
 <ol>
 <li>Clone the repositories.</li>
 <li>Build the images.</li>
 <li>Set the environment variables.</li>
-<li>Run the <a href="https://docs.docker.com/compose/">docker-compose</a> tool on a sample configuration file to define and enable a multi-container environment. </li>
+<li>Run the tool <a href="https://docs.docker.com/compose/">docker-compose</a> tool on a sample configuration file to define and enable a multi-container environment. </li>
 </ol>
-<p>See the <a href="https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md">Getting Started Guide</a> for information about MPS and RPS.</p>
-<h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
-<p><strong>Hardware</strong></p>
-<ul>
-<li>A development box </li>
-<li>At least one Intel® AMT device </li>
-</ul>
-<p><strong>Software</strong></p>
-<ul>
-<li>
-<p>Configuration as described in <a href="https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md">Getting Started RPS/MPS/RPC</a>.</p>
-</li>
-<li>
-<p>Before attempting this tutorial, follow the instructions in the Getting Started guide for setting up communication between the development system and the Intel® AMT device.</p>
-</li>
-<li>
-<p><a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop on Windows*</a></p>
-</li>
-<li>
-<p><a href="https://docs.docker.com/docker-for-mac/install/">Docker Desktop on Mac*</a></p>
-</li>
-</ul>
-<p>Docker Configuration Details</p>
-<ul>
-<li>The Docker for Windows installer defaults to enabling and running all the required settings necessary for this tutorial. </li>
-<li>Install before attempting the tutorial.</li>
-<li>After successful installation, the Docker icon (whale), appears on the task bar.</li>
-<li>To troubleshoot the installation, <a href="https://docs.docker.com/docker-for-windows/troubleshoot/">see the troubleshooting guide</a>.</li>
-</ul>
+<p>For information about MPS and RPS, see <a href="../../Local/installMPS/">Install MPS</a> and <a href="../../Local/installRPS/">Install RPS.</a></p>
 <h2 id="clone-the-mps-and-rps-repositories">Clone the MPS and RPS Repositories<a class="headerlink" href="#clone-the-mps-and-rps-repositories" title="Permanent link">&para;</a></h2>
 <p>Clone the MPS and RPS repositories if they are not already on the development system. </p>
 <h3 id="clone-mps">Clone MPS<a class="headerlink" href="#clone-mps" title="Permanent link">&para;</a></h3>
 <p>Clone the MPS repository.</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/mps.git mps
-</code></pre></div>
-
-
-<p><strong>8/24 Internal:</strong></p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.impcloud.net/Danger-Bay/MPS_MicroService.git mps
-cd mps
-git checkout merge-all-branches
-</code></pre></div>
-
-
-<p><strong>8/24 Internal:</strong></p>
-<div class="codehilite"><pre><span></span><code>cd webui
-notepad package.json
-
-
-Copy and replace the following line in the package.json. Update the access token with your Github Personal Access Token:
-
-&quot;mps-ui-toolkit&quot;: &quot;git+https://[your-access-token]@github.impcloud.net/Danger-Bay/MPS_UI_ToolKit.git&quot; //Update your access token 
 </code></pre></div>
 
 
@@ -951,23 +871,7 @@ Copy and replace the following line in the package.json. Update the access token
 </code></pre></div>
 
 
-<p><strong>8/24 Internal:</strong></p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.impcloud.net/Danger-Bay/RCS_MicroService.git rps
-cd rps
-</code></pre></div>
-
-
-<p><strong>8/24 Internal:</strong></p>
-<div class="codehilite"><pre><span></span><code>1. Open .rpsrc
-2. Change MPS_MicroService to mps in the file paths in the following 4 fields:
-   - credentials_path
-   - web_tls_cert
-   - web_tls_cert_key
-   - root_ca_cert
-</code></pre></div>
-
-
-<p>After the <strong>git clone</strong> commands complete, the parent directory will contain an MPS and RPS folder.</p>
+<p>After the <code>git clone</code> commands complete, the parent directory will contain an MPS and RPS folder.</p>
 <div class="codehilite"><pre><span></span><code>📦parent
  ┣ 📂mps
  ┗ 📂rps
@@ -984,7 +888,7 @@ cd rps
 <li>Tags contain up to 128 characters.</li>
 </ul>
 <blockquote>
-<p><strong>NOTE: Building a fresh Docker image may take several minutes.</strong> </p>
+<p><strong>Note: Building a fresh Docker image may take several minutes.</strong> </p>
 </blockquote>
 <h3 id="build-mps">Build MPS<a class="headerlink" href="#build-mps" title="Permanent link">&para;</a></h3>
 <p>1. Navigate to MPS folder and build the Docker image. </p>
@@ -994,6 +898,9 @@ docker build . -t mps:v1
 
 
 <p><img alt="Image of MPS Build Completion" src="../../assets/images/MPSBuild.png" /> </p>
+<blockquote>
+<p><strong>Note:</strong> On completion, a security warning is normal during local setup with the default values for developer testing environments.</p>
+</blockquote>
 <h3 id="build-rps">Build RPS<a class="headerlink" href="#build-rps" title="Permanent link">&para;</a></h3>
 <p>2. Navigate to the RPS folder and build the Docker image.</p>
 <div class="codehilite"><pre><span></span><code>cd ..
@@ -1006,7 +913,7 @@ docker build . -t rps:v1
 <h3 id="set-the-environment-variables">Set the Environment Variables<a class="headerlink" href="#set-the-environment-variables" title="Permanent link">&para;</a></h3>
 <p>3. After building the new MPS and RPS images, navigate to mps\scripts\docker-compose folder and copy the .env.template file to .env. </p>
 <div class="codehilite"><pre><span></span><code>cd ..
-cd mps\scripts\docker-compose
+cd mps/scripts/docker-compose
 </code></pre></div>
 
 
@@ -1052,7 +959,7 @@ cd mps\scripts\docker-compose
 <p><strong>Note: Forgot the name and tag from the build?</strong></p>
 <p>The <strong>docker images</strong> command lists repository names, tags, image IDs, and sizes. </p>
 <p><code>docker images</code></p>
-<p><img alt="Image of docker images command" src="/assets/images/DICommands.png" /></p>
+<p><img alt="Image of docker images command" src="../../assets/images/DICommands.png" /></p>
 </blockquote>
 <!-- 5. Set the proper proxy values if behind a proxy.
 
@@ -1073,36 +980,37 @@ cd mps\scripts\docker-compose
 
 <h2 id="run-docker-compose">Run docker-compose<a class="headerlink" href="#run-docker-compose" title="Permanent link">&para;</a></h2>
 <p>The environment file .env now contains the MPS and RPS environment variables to pass to the Docker engine. </p>
-<p>1. Navigate to the the <code>mps\scripts\docker-compose</code> directory. </p>
+<p>1. Navigate to the the <code>mps/scripts/docker-compose</code> directory. </p>
 <p>2. Run the <code>docker-compose up</code> command, which starts the containers.  This will take approximately 2-3 minutes to start the containers.</p>
 <div class="codehilite"><pre><span></span><code>docker-compose up
 </code></pre></div>
 
 
-<p><strong>BW Comment:</strong> Example Image Here?</p>
-<p><br><br></p>
-<h2 id="temp-link-continue-configuration-here-httpsgithubimpcloudnetdanger-bayopenamtcloudtoolkit-docsblobmastergettingstartedmd">Temp Link: Continue Configuration Here: https://github.impcloud.net/Danger-Bay/OpenAMTCloudToolkit-Docs/blob/master/GettingStarted.md<a class="headerlink" href="#temp-link-continue-configuration-here-httpsgithubimpcloudnetdanger-bayopenamtcloudtoolkit-docsblobmastergettingstartedmd" title="Permanent link">&para;</a></h2>
-<h2 id="begin-at-section-titled-configuring-the-rps-server">Begin at section titled: 'Configuring the RPS Server'<a class="headerlink" href="#begin-at-section-titled-configuring-the-rps-server" title="Permanent link">&para;</a></h2>
-<!-- ## Check Logs
-Check the logs to ensure the MPS and RPS services are properly handling the traffic from end devices.
-
-1. Open a new command line windows see the log files for mps and rps to enable the services already started to continue running.
-
-2. Navigate to the docker-compose folder
-
-3. Use the **docker-compose logs** command.
-
-   docker-compose logs [name of service]
-
-   ```
-   docker-compose logs mps
-   ```
-   ![Image of Docker Log Output](../assets/images/DockerLogFile.png) 
-   A log file may provide information for troubleshooting these problems:
-
-[BW, what are some of these problems?] -->
-                
-                  
+<p>3. <strong>Important</strong>: While the <code>docker-compose up</code> command is running, you may see a pop-up ask for permission for Docker Desktop Filesharing. You must select <strong>Share It</strong> for the <code>docker-compose up</code> command to execute successfully.  If the pop-up expires and <code>docker-compose up</code> fails.  You must run <code>docker-compose down</code> and then rerun <code>docker-compose up</code> to successfully start the containers.</p>
+<p><img alt="Image of filesharing" src="../../assets/images/DockerFileSharing.png" /></p>
+<p><br></p>
+<p>Successful Output:</p>
+<p><img alt="Image of docker compose command" src="../../assets/images/DockerCompose.png" /></p>
+<h2 id="check-logs">Check Logs<a class="headerlink" href="#check-logs" title="Permanent link">&para;</a></h2>
+<p>Alternatively, you can run <code>docker-compose up -d</code> to start the containers in the background.  To view the logs in a separate window, follow the steps below.</p>
+<p>Check the logs to ensure the MPS and RPS services are properly handling the traffic from end devices. </p>
+<ol>
+<li>
+<p>Open a new command line windows see the log files for mps and rps to enable the services already started to continue running.</p>
+</li>
+<li>
+<p>Navigate to the docker-compose folder</p>
+</li>
+<li>
+<p>Use the <strong>docker-compose logs</strong> command.</p>
+</li>
+</ol>
+<p>docker-compose logs [name of service]</p>
+<p><code>docker-compose logs mps</code>
+   <img alt="Image of Docker Log Output" src="../../assets/images/DockerLogFile.png" /> 
+   A log file may provide information for troubleshooting these problems:</p>
+<p><br></p>
+<p>Next up: <a href="../../Local/configureRPS/">Configure RPS</a></p>
                 
               
               
@@ -1119,34 +1027,34 @@ Check the logs to ensure the MPS and RPS services are properly handling the traf
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Overview
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../Local/configureRPS/" title="Configure RPS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../Local/configureRPS/" title="Configure RPS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Configure RPS
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1157,11 +1065,10 @@ Check the logs to ensure the MPS and RPS services are properly handling the traf
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1170,9 +1077,18 @@ Check the logs to ensure the MPS and RPS services are properly handling the traf
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
