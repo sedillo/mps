@@ -15,7 +15,7 @@
     
     
       
-        <title>Overview - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
+        <title>Build RPC on a Managed Device - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-and-deploy-microservices-with-local-docker-images" class="md-skip">
+        <a href="#windows" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Overview
+              Build RPC on a Managed Device
             
           </span>
         </div>
@@ -232,12 +232,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Build and Deploy Microservices with Local Docker* Images
@@ -255,63 +253,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Overview
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../Docker/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-need" class="md-nav__link">
-    What You'll Need
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    What You'll Do
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -321,7 +267,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dockerLocal/" title="Build Docker* Images" class="md-nav__link">
+    <a href="../../Docker/dockerLocal/" title="Build Docker* Images" class="md-nav__link">
       Build Docker* Images
     </a>
   </li>
@@ -336,10 +282,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Configure RPS and Manage a Device with MPS
@@ -359,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/configureRPS/" title="Configure RPS" class="md-nav__link">
+    <a href="../configureRPS/" title="Configure RPS" class="md-nav__link">
       Configure RPS
     </a>
   </li>
@@ -369,11 +317,120 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../General/buildRPC/" title="Build RPC on a Managed Device" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build RPC on a Managed Device
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Build RPC on a Managed Device" class="md-nav__link md-nav__link--active">
       Build RPC on a Managed Device
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows*
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    Clone the Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-vcpkg" class="md-nav__link">
+    Build VCPKG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-cpprestsdk" class="md-nav__link">
+    Build CPPRestSDK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-rpc" class="md-nav__link">
+    Build RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-rpc-to-activate-and-connect-the-amt-device" class="md-nav__link">
+    Run RPC to Activate and Connect the AMT Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux*
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository_1" class="md-nav__link">
+    Clone the Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-rpc_1" class="md-nav__link">
+    Build RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-rpc-to-activate-and-connect-the-amt-device_1" class="md-nav__link">
+    Run RPC to Activate and Connect the AMT Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -383,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/manageDevice/" title="Manage Device" class="md-nav__link">
+    <a href="../manageDevice/" title="Manage Device" class="md-nav__link">
       Manage Device
     </a>
   </li>
@@ -421,7 +478,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dockerCloud/" title="Docker Images on the Cloud" class="md-nav__link">
+    <a href="../../Docker/dockerCloud/" title="Docker Images on the Cloud" class="md-nav__link">
       Docker Images on the Cloud
     </a>
   </li>
@@ -666,8 +723,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -676,23 +731,84 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#windows" class="md-nav__link">
+    Windows*
   </a>
+  
+    <nav class="md-nav" aria-label="Windows*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    Clone the Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-vcpkg" class="md-nav__link">
+    Build VCPKG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-cpprestsdk" class="md-nav__link">
+    Build CPPRestSDK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-rpc" class="md-nav__link">
+    Build RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-rpc-to-activate-and-connect-the-amt-device" class="md-nav__link">
+    Run RPC to Activate and Connect the AMT Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-need" class="md-nav__link">
-    What You'll Need
+  <a href="#linux" class="md-nav__link">
+    Linux*
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository_1" class="md-nav__link">
+    Clone the Repository
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    What You'll Do
+        
+          <li class="md-nav__item">
+  <a href="#build-rpc_1" class="md-nav__link">
+    Build RPC
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-rpc-to-activate-and-connect-the-amt-device_1" class="md-nav__link">
+    Run RPC to Activate and Connect the AMT Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -712,69 +828,191 @@
                   
                 
                 
-                <h1 id="build-and-deploy-microservices-with-local-docker-images">Build and Deploy Microservices with Local Docker* Images<a class="headerlink" href="#build-and-deploy-microservices-with-local-docker-images" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This section outlines the setup of the ActivEdge's microservices and client application. Take this path to install MPS and RPS as Docker images that will function as services on a local system or the cloud as in Figure 1.</p>
-<p><a href="../../assets/images/HelloWorldDocker.png"><img alt="Docker Local Overview" src="../../assets/images/HelloWorldDocker.png" /></a></p>
-<p><strong>Figure 1: Microservices deployed as Docker images</strong></p>
-<h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
-<p><strong>Hardware</strong></p>
-<p>At minimum, to install and use the ActivEdge, a network configuration must include:</p>
-<ul>
-<li>A development PC </li>
-<li>At least one Intel® AMT device</li>
-</ul>
-<p>Both systems must be on the same network. Instructions assume wired connections.</p>
-<p><strong>Software</strong></p>
-<ul>
-<li>
-<p>The <strong>development PC</strong> hosts Management Presence Server (MPS) and Remote Provisioning Server (RPS) and requires the following software:</p>
-<ul>
-<li>
-<p><a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop on Windows*</a> or <a href="https://docs.docker.com/docker-for-mac/install/">Docker Desktop on Linux*</a></p>
-<p>Docker Configuration Details:</p>
-<ul>
-<li>The Docker for Windows installer defaults to enable all the required settings for this tutorial.</li>
-<li>After successful installation, the Docker icon (whale), will appear on the task bar.</li>
-<li>To troubleshoot the installation, <a href="https://docs.docker.com/docker-for-windows/troubleshoot/">see the troubleshooting guide</a>.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://www.google.com/chrome">Chrome* Browser</a></p>
-</li>
-<li>
-<p><a href="https://git-scm.com/downloads">git</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p>The <strong>managed device (test client), with Intel® vPro</strong> runs the Remote Provisioning Client (RPC) and requires the following software:</p>
-<ul>
-<li>
-<p><a href="https://git-scm.com/downloads">git</a></p>
-</li>
-<li>
-<p><a href="https://visualstudio.microsoft.com/">Microsoft* Visual Studio</a>, 2017 or newer version </p>
-</li>
-</ul>
-<blockquote>
-<p>Note: Microsoft* Visual Studio on the managed devices is not typical for production environments. This is for demonstration purposes.
+                  <h1>Build RPC on a Managed Device</h1>
+                
+                <p>The Remote Provisioning Client (RPC) communicates with the Managability Engine Interface (MEI) and RPS interfaces. The MEI uses the ME Driver to talk to Intel AMT. By running RPC, we will activate Intel AMT into Client Control Mode (CCM), or ACM based on the created profile, as well as configure the CIRA connection of the AMT device to the MPS. After successfully running, the AMT device will be ready to be managed remotely using the web server!</p>
+<div class="admonition note">
+<p class="admonition-title">Production Environment<p>In a production environment, RPC would be built on a development device. From there, a software distribution tool, such as Microsoft* SCCM, would distribute the thin application to the fleet of AMT devices.  After running, it does <strong>not</strong> have to remain on the AMT device to maintain the connection.</p>
 </p>
+</div>
+<p><a href="../../assets/images/RPC_Overview.png"><img alt="RPC" src="../../assets/images/RPC_Overview.png" /></a></p>
+<h3 id="windows">Windows*<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p><strong>Important: Perform the following steps on the Intel&reg; AMT device. Enter the commands in the following sections to create RPC on Windows.</strong></p>
+<h4 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h4>
+<p>1. Open the 'X64 Native Tools command prompt for VS 20XX' as Administrator.</p>
+<blockquote>
+<p><strong>Note:</strong> You can find this command prompt in the Start Menu or in the following directory path:<code>./Programs/Visual Studio 2019/Visual Studio Tools/VC</code></p>
 </blockquote>
-</li>
-</ul>
-<h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
-<p>Follow the steps in these sections sequentially to deploy Docker* images on a local development system: </p>
+<p>2. Clone the RPC repository.</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rpc.git
+</code></pre></div>
+
+
+<p>3. Change to the rpc directory.</p>
+<div class="codehilite"><pre><span></span><code>cd rpc
+</code></pre></div>
+
+
+<p>4. Checkout the ActivEdge branch</p>
+<div class="codehilite"><pre><span></span><code>git checkout ActivEdge
+</code></pre></div>
+
+
+<h4 id="build-vcpkg">Build VCPKG<a class="headerlink" href="#build-vcpkg" title="Permanent link">&para;</a></h4>
+<p>1. In the rpc directory, clone the Vcpkg repository. Vcpkg is a C/C++ Library Manager for Windows that was created by Microsoft.  Find out more about it <a href="https://github.com/microsoft/vcpkg">here</a>.</p>
+<div class="codehilite"><pre><span></span><code>git clone --branch 2020.01 https://github.com/microsoft/vcpkg.git
+cd vcpkg
+</code></pre></div>
+
+
+<p>2. Build vcpkg.exe using the following command:</p>
+<div class="codehilite"><pre><span></span><code>bootstrap-vcpkg.bat
+</code></pre></div>
+
+
+<p>3. Set up user-wide integration in order to allow Vcpkg to work with Visual Studio. </p>
+<div class="codehilite"><pre><span></span><code>vcpkg integrate install
+</code></pre></div>
+
+
+<h4 id="build-cpprestsdk">Build CPPRestSDK<a class="headerlink" href="#build-cpprestsdk" title="Permanent link">&para;</a></h4>
+<p>4. Make sure you are still in the ~/vcpkg directory.</p>
+<p>5. Install the C++ REST SDK package using Vcpkg. C++ REST SDK is a library for cloud-based client-server communication with modern API design.  Find out more about it <a href="https://github.com/microsoft/cpprestsdk">here</a>.</p>
+<p><strong>Note:</strong> This will take 15–25 minutes, depending on download speeds.</p>
+<div class="codehilite"><pre><span></span><code>vcpkg install cpprestsdk:x64-windows-static
+</code></pre></div>
+
+
+<h4 id="build-rpc">Build RPC<a class="headerlink" href="#build-rpc" title="Permanent link">&para;</a></h4>
+<p>6. Change to the rpc directory.</p>
+<div class="codehilite"><pre><span></span><code>cd ..
+</code></pre></div>
+
+
+<p>7. Create a new build directory within the <strong>./rpc</strong> directory and change to it.</p>
+<div class="codehilite"><pre><span></span><code>mkdir build
+cd build
+</code></pre></div>
+
+
+<p>8. Build rpc.exe using CMake.  The toolchain file allows us to use Vcpkg with CMake outside of an IDE.</p>
+<div class="codehilite"><pre><span></span><code>cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake --build . --config Debug
+</code></pre></div>
+
+
+<p>9. Navigate to the Release directory. In this directory, you should see rpc.exe.</p>
+<div class="codehilite"><pre><span></span><code>cd Debug
+</code></pre></div>
+
+
+<h4 id="run-rpc-to-activate-and-connect-the-amt-device">Run RPC to Activate and Connect the AMT Device<a class="headerlink" href="#run-rpc-to-activate-and-connect-the-amt-device" title="Permanent link">&para;</a></h4>
+<p>1. Run RPC with the following command to activate and configure Intel&reg; AMT.</p>
 <ul>
-<li>Build and Deploy Docker* ImagesLocally</li>
-<li>Configure RPS</li>
-<li>Build RPC on Managed Device</li>
-<li>Manage Device</li>
+<li>Replace [Development-IP-Address] with the development device's IP address, where the MPS and RPS servers are running</li>
+<li>Replace [profile-name] with your created profile from the Web Server.</li>
 </ul>
-<p>Run instructions in these sections can use Microsoft Windows<em> or Linux</em> environments. The terminal may be A) the Windows Command Prompt in Administrator mode or B) the Linux* shell/terminal. </p>
-<p>Estimated completion time:** 60 minutes</p>
-<p>Next up: <a href="../dockerLocal/">Build Docker* Images</a></p>
-<p><br><br></p>
+<div class="codehilite"><pre><span></span><code>rpc.exe -u wss://[Development-IP-Address]:8080 -c &quot;-t activate --profile [profile-name]&quot;
+</code></pre></div>
+
+
+<p><br></p>
+<blockquote>
+<p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
+<p><strong>Default login credentials:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>web_admin_user</strong></td>
+<td align="left">standalone</td>
+</tr>
+<tr>
+<td align="left"><strong>web_admin_password</strong></td>
+<td align="left">G@ppm0ym</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><br></p>
+<h3 id="linux">Linux*<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>Follow these instructions to create RPC on Linux&ast;.</p>
+<h4 id="clone-the-repository_1">Clone the Repository<a class="headerlink" href="#clone-the-repository_1" title="Permanent link">&para;</a></h4>
+<p>1. On the Intel&reg; AMT device, open an elevated command line.</p>
+<p>2. Clone the RPC Repository.</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rpc.git
+</code></pre></div>
+
+
+<p>3. Change to the rpc directory.</p>
+<div class="codehilite"><pre><span></span><code>cd rpc
+</code></pre></div>
+
+
+<p>4. Checkout the ActivEdge branch</p>
+<div class="codehilite"><pre><span></span><code>git checkout ActivEdge
+</code></pre></div>
+
+
+<h4 id="build-rpc_1">Build RPC<a class="headerlink" href="#build-rpc_1" title="Permanent link">&para;</a></h4>
+<p>1. Build the required dependencies; enter the following command:</p>
+<div class="codehilite"><pre><span></span><code>sudo apt install git cmake build-essential libboost-system-dev libboost-thread-dev libboost-random-dev libboost-regex-dev  libboost-filesystem-dev libssl-dev zlib1g-dev
+</code></pre></div>
+
+
+<p>Build RPC with the following commands:</p>
+<p>2. Create a new build directory and change to it.</p>
+<div class="codehilite"><pre><span></span><code>mkdir build
+cd build
+</code></pre></div>
+
+
+<p>3. Build RPC using CMake.</p>
+<div class="codehilite"><pre><span></span><code>cmake -DCMAKE_BUILD_TYPE=Debug ..
+cmake --build .
+</code></pre></div>
+
+
+<h4 id="run-rpc-to-activate-and-connect-the-amt-device_1">Run RPC to Activate and Connect the AMT Device<a class="headerlink" href="#run-rpc-to-activate-and-connect-the-amt-device_1" title="Permanent link">&para;</a></h4>
+<p>4. Run RPC with the following command to activate and configure Intel&reg; AMT.</p>
+<ul>
+<li>Replace [Development-IP-Address] with the development device's IP address, where the MPS and RPS servers are running</li>
+<li>Replace [profile-name] with your created profile from the Web Server.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>sudo ./rpc -u wss://[Development-IP-Address]:8080 -c &quot;-t activate --profile [profile-name]
+</code></pre></div>
+
+
+<p><br></p>
+<blockquote>
+<p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
+<p><strong>Default login credentials:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>web_admin_user</strong></td>
+<td align="left">standalone</td>
+</tr>
+<tr>
+<td align="left"><strong>web_admin_password</strong></td>
+<td align="left">G@ppm0ym</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><br></p>
+<p>Next up: <a href="../manageDevice/">Manage Device</a></p>
                 
               
               
@@ -793,7 +1031,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../Local/installRPS/" title="Install RPS Locally" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../configureRPS/" title="Configure RPS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -802,19 +1040,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Install RPS Locally
+                Configure RPS
               </div>
             </div>
           </a>
         
         
-          <a href="../dockerLocal/" title="Build Docker* Images" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../manageDevice/" title="Manage Device" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Build Docker* Images
+                Manage Device
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
