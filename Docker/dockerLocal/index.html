@@ -374,13 +374,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#check-logs" class="md-nav__link">
-    Check Logs
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -811,13 +804,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#check-logs" class="md-nav__link">
-    Check Logs
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -846,18 +832,27 @@
 <li>Set the environment variables.</li>
 <li>Run the tool <a href="https://docs.docker.com/compose/">docker-compose</a> tool on a sample configuration file to define and enable a multi-container environment. </li>
 </ol>
-<p>For information about MPS and RPS, see <a href="../../Local/installMPS/">Install MPS</a> and <a href="../../Local/installRPS/">Install RPS.</a></p>
 <h2 id="clone-the-mps-and-rps-repositories">Clone the MPS and RPS Repositories<a class="headerlink" href="#clone-the-mps-and-rps-repositories" title="Permanent link">&para;</a></h2>
-<p>Clone the MPS and RPS repositories if they are not already on the development system. </p>
+<p>Navigate to a directory of your choice for development.</p>
 <h3 id="clone-mps">Clone MPS<a class="headerlink" href="#clone-mps" title="Permanent link">&para;</a></h3>
-<p>Clone the MPS repository.</p>
+<p>1.Clone the MPS repository.</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/mps.git mps
 </code></pre></div>
 
 
+<p>2. Checkout the ActivEdge branch.</p>
+<div class="codehilite"><pre><span></span><code>git checkout ActivEdge
+</code></pre></div>
+
+
 <h3 id="clone-rps">Clone RPS<a class="headerlink" href="#clone-rps" title="Permanent link">&para;</a></h3>
-<p>Clone the RPS repository.</p>
+<p>1.Clone the RPS repository.</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rps.git rps
+</code></pre></div>
+
+
+<p>2. Checkout the ActivEdge branch.</p>
+<div class="codehilite"><pre><span></span><code>git checkout ActivEdge
 </code></pre></div>
 
 
@@ -981,22 +976,24 @@ cd mps/scripts/docker-compose
 <p><br></p>
 <p>Successful Output:</p>
 <p><img alt="Image of docker compose command" src="../../assets/images/DockerCompose.png" /></p>
-<h2 id="check-logs">Check Logs<a class="headerlink" href="#check-logs" title="Permanent link">&para;</a></h2>
-<p>Alternatively, run <code>docker-compose up -d</code> to start the containers in the background.  To view the logs in a separate window, follow the steps below.</p>
-<p>Check the logs to ensure the MPS and RPS services are properly handling the traffic from end devices. </p>
-<ol>
-<li>Allow the previous command line window for mps and rps to continue to run. Open a new command line window to run the <strong>docker-compose logs</strong> command. </li>
-<li>
-<p>Navigate to the docker-compose folder</p>
-</li>
-<li>
-<p>Type the <strong>docker-compose logs</strong> command.</p>
-</li>
-</ol>
-<p>docker-compose logs [name of service]</p>
-<p><code>docker-compose logs mps</code>
-   <img alt="Image of Docker Log Output" src="../../assets/images/DockerLogFile.png" /> 
-   A log file may provide information for troubleshooting these problems:</p>
+<!-- ## Check Logs
+Alternatively, run `docker-compose up -d` to start the containers in the background.  To view the logs in a separate window, follow the steps below.
+
+Check the logs to ensure the MPS and RPS services are properly handling the traffic from end devices. 
+
+1. Allow the previous command line window for mps and rps to continue to run. Open a new command line window to run the **docker-compose logs** command. 
+2. Navigate to the docker-compose folder
+
+3. Type the **docker-compose logs** command.
+
+   docker-compose logs [name of service]
+
+   ```
+   docker-compose logs mps
+   ```
+   ![Image of Docker Log Output](../assets/images/DockerLogFile.png) 
+   A log file may provide information for troubleshooting these problems: -->
+
 <p><br></p>
 <p>Next up: <a href="../../General/configureRPS/">Configure RPS</a></p>
                 

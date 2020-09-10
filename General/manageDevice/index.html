@@ -680,10 +680,11 @@
                 
                   <h1>Manage Device</h1>
                 
-                <h2 id="manage-the-intel-amt-device-using-mps">Manage the Intel&reg; AMT Device using MPS<a class="headerlink" href="#manage-the-intel-amt-device-using-mps" title="Permanent link">&para;</a></h2>
+                <p>Estimated completion time: 5 minutes</p>
+<h2 id="manage-the-intel-amt-device-using-mps">Manage the Intel&reg; AMT Device using MPS<a class="headerlink" href="#manage-the-intel-amt-device-using-mps" title="Permanent link">&para;</a></h2>
 <p>1. On your development device, browse to the web server using the development device's IP Address.</p>
 <p><strong>Example URL:</strong> https://[Development-IP-Address]:3000</p>
-<p>2. Log in with the <em>web_admin_user</em> and <em>web_admin_password</em> values set in the .mpsrc file. If you changed these fields, enter your customized login, or use the default values below.</p>
+<p>2. Log in with the default credentials below.</p>
 <p><strong>Default credentials:</strong></p>
 <table>
 <thead>
@@ -694,28 +695,35 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>web_admin_user</strong></td>
+<td align="left"><strong>Username</strong></td>
 <td align="left">standalone</td>
 </tr>
 <tr>
-<td align="left"><strong>web_admin_password</strong></td>
+<td align="left"><strong>Password</strong></td>
 <td align="left">G@ppm0ym</td>
 </tr>
 </tbody>
 </table>
 <p>3. After logging in, click on Management Presence Server.</p>
+<p><a href="../../assets/images/WebUI_HomeMPS.png"><img alt="WebUI" src="../../assets/images/WebUI_HomeMPS.png" /></a></p>
+<p><br></p>
 <p>4. Click the devices tab from the menu on the left, or click <em>Connected</em> in the default homepage.</p>
+<blockquote>
+<p><strong>Note:</strong> If the activated device is not listed or seen, restart the AMT device. After succesfully restarting, refresh the WebUI to see if the <em>Status</em> changes to <em>Connected</em> and turns green.</p>
+</blockquote>
 <p><a href="../../assets/images/MPS_ConnectedDevice.png"><img alt="mps" src="../../assets/images/MPS_ConnectedDevice.png" /></a></p>
-<p>5. Select the connected device you want to manage.</p>
+<p>5. Select the checkbox by the connected device you want to manage.</p>
 <p>6. Select an action to perform from the options on the right.</p>
 <blockquote>
-<p><strong>Note:</strong> The KVM feature will not function at this point, since the device was activated the device in Client Control Mode(CCM). To use KVM, follow the <a href="../../Tutorials/acmActivation/">ACM Activation Tutorial</a> to see how to configure a device into Admin Control Mode and remotely KVM using out-of-band capabilities.</p>
+<p><strong>Note:</strong> Since the device was activated the device in Client Control Mode(CCM), the KVM feature will not function in this current release. To use KVM, follow the <a href="../../Tutorials/acmActivation/">ACM Activation Tutorial</a> to see how to configure a device into Admin Control Mode and remotely KVM using out-of-band capabilities.</p>
 </blockquote>
 <p><a href="../../assets/images/MPS_ManageDevice.png"><img alt="mps" src="../../assets/images/MPS_ManageDevice.png" /></a></p>
 <p><br></p>
-<p>Next steps: 
-- Find out about the ActivEdge UI Toolkit, vault storage, ACM activation, and more in <a href="../Tutorials">tutorials</a>.
-- Read about security and other out-of-band ActivEdge <a href="../Topics">topics</a>.</p>
+<p>Next steps: </p>
+<ul>
+<li>Find out about the ActivEdge <a href="../../Tutorials/uitoolkit/">UI Toolkit</a> and more under Tutorials.</li>
+<li>Read about security recommendations and other ActivEdge features under Topics.</li>
+</ul>
 <p><br></p>
                 
               

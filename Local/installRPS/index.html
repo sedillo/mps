@@ -695,16 +695,17 @@
                   <h1>Install RPS Locally</h1>
                 
                 <p>The Remote Provisioning Service is a Node.js-based microservice that works with the Remote Provisioning Client (RPC) to activate Intel&reg; AMT platforms using a pre-defined profile.</p>
-<p>The image below illustrates how RPS activates an Intel&reg; AMT device for remote management.</p>
+<p>The image below illustrates how RPS activates an Intel&reg; AMT device for remote management. In this section, we will see how to deploy number two, RPS.</p>
 <p><a href="../../assets/images/RPS_Overview.png"><img alt="RPS" src="../../assets/images/RPS_Overview.png" /></a></p>
 <h3 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
-<p>1. Open a new Command Prompt or Terminal with Administrator or elevated privileges.</p>
+<p>1. Open a new Command Prompt as Administrator or a Terminal.</p>
 <p>2. Clone the RPS repository to the same parent directory where the mps directory is located. Enter the following command:</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rps.git
+cd rps
 </code></pre></div>
 
 
-<p>3. Checkout the ActivEdge branch</p>
+<p>3. Checkout the ActivEdge branch.</p>
 <div class="codehilite"><pre><span></span><code>git checkout ActivEdge
 </code></pre></div>
 
@@ -717,21 +718,19 @@
 
 
 <h3 id="start-the-rps-server">Start the RPS Server<a class="headerlink" href="#start-the-rps-server" title="Permanent link">&para;</a></h3>
-<p>1. Navigate to the RPS directory.</p>
-<div class="codehilite"><pre><span></span><code>cd rps
-</code></pre></div>
-
-
-<p>2. Run the install command to install all required dependencies. </p>
+<p>1. In the rps directory, run the install command to install all required dependencies. </p>
 <div class="codehilite"><pre><span></span><code>npm install
 </code></pre></div>
 
 
-<p>3. Then, start the server. The websocket server listens on the port specified in the file app.config.dev.json. By default, this is port 8080.</p>
+<p>2. Then, start the server. By default, the RPS web port is 8080.</p>
 <div class="codehilite"><pre><span></span><code>npm run dev
 </code></pre></div>
 
 
+<blockquote>
+<p><strong>Note:</strong> Warning messages are okay and expected for optional dependencies.</p>
+</blockquote>
 <p>Example Output:</p>
 <p><a href="../assets/images/npmrundev.png"><img alt="RPS Output" src="../../assets/images/RPS_npmrundev.png" /></a></p>
 <p><br></p>

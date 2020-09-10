@@ -779,7 +779,12 @@
                 
                 
                 <h1 id="api-and-command-reference">API and Command Reference<a class="headerlink" href="#api-and-command-reference" title="Permanent link">&para;</a></h1>
-<p>This section is a reference to the MPS API methods available in ActivEdge, and to some commands it provides.</p>
+<p>This section is a reference to the MPS API methods available in ActivEdge, and to some commands it provides. </p>
+<p>There are two types of methods for the MPS Server:</p>
+<ul>
+<li>AMT methods - Allow you to send device-specific calls for things such as power actions or audit logs</li>
+<li>Admin methods - Allow you to send calls for info for all devices or some MPS configuration information.</li>
+</ul>
 <h2 id="how-to-use-the-rest-api">How to Use the REST API<a class="headerlink" href="#how-to-use-the-rest-api" title="Permanent link">&para;</a></h2>
 <h3 id="request-url">Request URL<a class="headerlink" href="#request-url" title="Permanent link">&para;</a></h3>
 <p>The request URL is assembled using your MPS server's IP Address, the port, and the base path for the method you would like to run. The tables below explore what methods are accessible for each base path.</p>
@@ -811,10 +816,6 @@
 <td align="left">Lists all devices known to MPS, regardless of connected status</td>
 </tr>
 <tr>
-<td align="left"><strong><a href="../MPSmethods/auditlog/">AuditLog</a></strong></td>
-<td align="left">Returns a requested amount or time range of Intel® AMT Audit Log data for a specified guid</td>
-</tr>
-<tr>
 <td align="left"><strong><a href="../MPSmethods/connecteddevices/">ConnectedDevices</a></strong></td>
 <td align="left">Lists all devices currently connected to MPS</td>
 </tr>
@@ -843,6 +844,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left"><strong><a href="../MPSmethods/auditlog/">AuditLog</a></strong></td>
+<td align="left">Returns a requested amount or time range of Intel® AMT Audit Log data for a specified guid</td>
+</tr>
 <tr>
 <td align="left"><strong><a href="../MPSmethods/eventlog/">EventLog</a></strong></td>
 <td align="left">Return sensor and hardware event data</td>

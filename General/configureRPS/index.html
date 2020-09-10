@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#logging-in-to-the-web-server" class="md-skip">
+        <a href="#log-in-to-the-web-server" class="md-skip">
           Skip to content
         </a>
       
@@ -334,30 +334,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-in-to-the-web-server" class="md-nav__link">
-    Logging in to the Web Server
+  <a href="#log-in-to-the-web-server" class="md-nav__link">
+    Log in to the Web Server
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-cira-configuration-and-profiles-to-rps" class="md-nav__link">
-    Adding CIRA Configuration and Profiles to RPS
-  </a>
-  
-    <nav class="md-nav" aria-label="Adding CIRA Configuration and Profiles to RPS">
+    <nav class="md-nav" aria-label="Log in to the Web Server">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-a-cira-config" class="md-nav__link">
-    Creating a CIRA Config
+  <a href="#create-a-cira-config" class="md-nav__link">
+    Create a CIRA Config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-a-profile" class="md-nav__link">
-    Creating a Profile
+  <a href="#create-a-profile" class="md-nav__link">
+    Create a Profile
   </a>
   
 </li>
@@ -683,30 +676,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-in-to-the-web-server" class="md-nav__link">
-    Logging in to the Web Server
+  <a href="#log-in-to-the-web-server" class="md-nav__link">
+    Log in to the Web Server
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-cira-configuration-and-profiles-to-rps" class="md-nav__link">
-    Adding CIRA Configuration and Profiles to RPS
-  </a>
-  
-    <nav class="md-nav" aria-label="Adding CIRA Configuration and Profiles to RPS">
+    <nav class="md-nav" aria-label="Log in to the Web Server">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-a-cira-config" class="md-nav__link">
-    Creating a CIRA Config
+  <a href="#create-a-cira-config" class="md-nav__link">
+    Create a CIRA Config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-a-profile" class="md-nav__link">
-    Creating a Profile
+  <a href="#create-a-profile" class="md-nav__link">
+    Create a Profile
   </a>
   
 </li>
@@ -734,7 +720,8 @@
                 
                   <h1>Configure RPS</h1>
                 
-                <h3 id="logging-in-to-the-web-server">Logging in to the Web Server<a class="headerlink" href="#logging-in-to-the-web-server" title="Permanent link">&para;</a></h3>
+                <p>Estimated completion time: 15 minutes</p>
+<h2 id="log-in-to-the-web-server">Log in to the Web Server<a class="headerlink" href="#log-in-to-the-web-server" title="Permanent link">&para;</a></h2>
 <p>1. Open Chrome* browser and navigate to the web server using your development device's IP address on port 3000.</p>
 <div class="codehilite"><pre><span></span><code>https://[Development-IP-Address]:3000
 </code></pre></div>
@@ -744,8 +731,8 @@
 <p><strong>Note:</strong> You must use an IP Address to connect to the web server. Using <em>localhost</em> will not work.</p>
 </blockquote>
 <p>2. Because we are using self-signed certificates, we will be prompted by a warning screen. Click Advanced, then Proceed to continue to connect to the webserver.</p>
-<p>3. Log in with the <em>web_admin_user</em> and <em>web_admin_password</em> set in the <a href="../../Local/installMPS/">.mpsrc file</a>. If you changed these parameters, enter your customized login, or use the defaults provided below.</p>
-<p><strong>Default credentials from MPS:</strong></p>
+<p>3. Log in to the web portal with the credentials below.</p>
+<p><strong>Default credentials:</strong></p>
 <table>
 <thead>
 <tr>
@@ -755,20 +742,20 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>web_admin_user</strong></td>
+<td align="left"><strong>Username</strong></td>
 <td align="left">standalone</td>
 </tr>
 <tr>
-<td align="left"><strong>web_admin_password</strong></td>
+<td align="left"><strong>Password</strong></td>
 <td align="left">G@ppm0ym</td>
 </tr>
 </tbody>
 </table>
 <p>4. Select Remote Provisioning Server on the web portal.</p>
+<p><a href="../../assets/images/WebUI_HomeRPS.png"><img alt="WebUI" src="../../assets/images/WebUI_HomeRPS.png" /></a></p>
 <p><br></p>
-<h3 id="adding-cira-configuration-and-profiles-to-rps">Adding CIRA Configuration and Profiles to RPS<a class="headerlink" href="#adding-cira-configuration-and-profiles-to-rps" title="Permanent link">&para;</a></h3>
-<h4 id="creating-a-cira-config">Creating a CIRA Config<a class="headerlink" href="#creating-a-cira-config" title="Permanent link">&para;</a></h4>
-<p>CIRA stands for Client Initiated Remote Access.  It allows a CIRA-capable edge device to reach out and establish a persistent connection to the MPS server rather than the MPS server reaching to the edge device.  This enables access to edge devices that might be harder to reach behind things such as proxies/firewalls/etc.</p>
+<h3 id="create-a-cira-config">Create a CIRA Config<a class="headerlink" href="#create-a-cira-config" title="Permanent link">&para;</a></h3>
+<p>CIRA stands for Client Initiated Remote Access.  It allows a CIRA-capable edge device to reach out and establish a persistent connection to the MPS server rather than the MPS server reaching to the edge device.  This enables access to edge devices that might be harder to reach behind things such as firewalls/NATs/etc.</p>
 <p>A CIRA Configuration provides the Remote Provisioning Client (RPC) the required info to establish the edge device's CIRA connection to the MPS Server during the activation process.  </p>
 <p><br></p>
 <p>1. Select the CIRA Configs tab from the left-hand menu.</p>
@@ -796,16 +783,14 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Note:</strong> For this guide, we are using the default values above. The User Name and Password fields in the CIRA Config must match the <em>mpsuser</em> and <em>mpspass</em> values set in the <code>.mpsrc</code> file in .\mps during the setup and installation of MPS.</p>
-</blockquote>
-<p>7. Provide your Development Device's IP address as the Common Name to generate the self-sign certificate by the MPS server.</p>
-<p>8. Click Load under MPS Root Certificate.</p>
-<p>9. Click Create.</p>
+<p>7. Provide your Development Device's IP address as the Common Name to generate the self-signed certificate by the MPS server.</p>
+<p>8. Leave Mps root certificate format to the default, Auto Load.</p>
+<p>9. Click Load under MPS Root Certificate.</p>
+<p>10. Click Create.</p>
 <p>Example CIRA Config:</p>
 <p><a href="../../assets/images/RPS_CreateCIRAConfig.png"><img alt="RPS" src="../../assets/images/RPS_CreateCIRAConfig.png" /></a></p>
 <p><br></p>
-<h4 id="creating-a-profile">Creating a Profile<a class="headerlink" href="#creating-a-profile" title="Permanent link">&para;</a></h4>
+<h3 id="create-a-profile">Create a Profile<a class="headerlink" href="#create-a-profile" title="Permanent link">&para;</a></h3>
 <p>Profiles provide configuration information to the AMT Firmware during the activation process with the Remote Provisioning Client (RPC).</p>
 <p>Profiles also distinguish between activating a device in <strong>Client Control Mode</strong> (CCM) or <strong>Admin Control Mode</strong> (ACM). In this guide, we will activate into Client Control Mode. For more information on Admin Control Mode and the differences, <a href="../../Tutorials/acmActivation/">click here</a>.</p>
 <div class="admonition note">
@@ -818,7 +803,7 @@
 <p>3. Specify a Profile Name of your choice.</p>
 <p>4. Uncheck Generate Random Password.</p>
 <div class="admonition note">
-<p class="admonition-title">Production Environment<p>In a production environment, passwords are typically randomly generated to create stronger, more secure passwords.</p>
+<p class="admonition-title">Production Environment<p>In a production environment, you typically generate a random password for each AMT device to create a stronger, more secure AMT environment.</p>
 </p>
 </div>
 <p>5. Provide a strong AMT Password. </p>

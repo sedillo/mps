@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windows" class="md-skip">
+        <a href="#remote-provisioning-client" class="md-skip">
           Skip to content
         </a>
       
@@ -346,6 +346,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#remote-provisioning-client" class="md-nav__link">
+    Remote Provisioning Client
+  </a>
+  
+    <nav class="md-nav" aria-label="Remote Provisioning Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows*
   </a>
@@ -392,8 +400,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux*
   </a>
@@ -419,6 +427,11 @@
   <a href="#run-rpc-to-activate-and-connect-the-amt-device_1" class="md-nav__link">
     Run RPC to Activate and Connect the AMT Device
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -731,6 +744,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#remote-provisioning-client" class="md-nav__link">
+    Remote Provisioning Client
+  </a>
+  
+    <nav class="md-nav" aria-label="Remote Provisioning Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows*
   </a>
@@ -777,8 +798,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux*
   </a>
@@ -811,6 +832,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -830,14 +856,21 @@
                 
                   <h1>Build RPC on a Managed Device</h1>
                 
-                <p>The Remote Provisioning Client (RPC) communicates with the Managability Engine Interface (MEI) and RPS interfaces. The MEI uses the ME Driver to talk to Intel AMT. By running RPC, we will activate Intel AMT into Client Control Mode (CCM), or ACM based on the created profile, as well as configure the CIRA connection of the AMT device to the MPS. After successfully running, the AMT device will be ready to be managed remotely using the web server!</p>
+                <p>Estimated completion time:</p>
+<ul>
+<li>30 minutes on Windows 10 devices (20-25 minutes are required installation time estimates)</li>
+<li>15 minutes on Linux devices</li>
+</ul>
+<h2 id="remote-provisioning-client">Remote Provisioning Client<a class="headerlink" href="#remote-provisioning-client" title="Permanent link">&para;</a></h2>
+<p>The Remote Provisioning Client (RPC) communicates with the Managability Engine Interface (MEI) and RPS interfaces. The MEI uses the ME Driver to talk to Intel AMT. By running RPC, we will activate Intel AMT into Client Control Mode (CCM), or ACM based on the created profile, as well as configure the CIRA connection of the AMT device to the MPS. After successfully running, the AMT device will be ready to be managed remotely using the web server!</p>
 <div class="admonition note">
-<p class="admonition-title">Production Environment<p>In a production environment, RPC would be built on a development device. From there, a software distribution tool, such as Microsoft* SCCM, would distribute the thin application to the fleet of AMT devices.  After running, it does <strong>not</strong> have to remain on the AMT device to maintain the connection.</p>
+<p class="admonition-title">Production Environment<p>In a production environment, RPC would be built on a development device. From there, RPC can be deployed with an in-band manageability agent to distrubute it to the fleet of AMT devices.  The in-band managebility agent can invoke RPC to run and activate the AMT devices.</p>
 </p>
 </div>
 <p><a href="../../assets/images/RPC_Overview.png"><img alt="RPC" src="../../assets/images/RPC_Overview.png" /></a></p>
 <h3 id="windows">Windows*<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p><strong>Important: Perform the following steps on the Intel&reg; AMT device. Enter the commands in the following sections to create RPC on Windows.</strong></p>
+<p>Navigate to a directory of your choice to clone and build RPC.</p>
 <h4 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h4>
 <p>1. Open the 'X64 Native Tools command prompt for VS 20XX' as Administrator.</p>
 <blockquote>
@@ -853,7 +886,7 @@
 </code></pre></div>
 
 
-<p>4. Checkout the ActivEdge branch</p>
+<p>4. Checkout the ActivEdge branch.</p>
 <div class="codehilite"><pre><span></span><code>git checkout ActivEdge
 </code></pre></div>
 
@@ -876,7 +909,7 @@ cd vcpkg
 
 
 <h4 id="build-cpprestsdk">Build CPPRestSDK<a class="headerlink" href="#build-cpprestsdk" title="Permanent link">&para;</a></h4>
-<p>4. Make sure you are still in the ~/vcpkg directory.</p>
+<p>4. Make sure you are still in the ../vcpkg directory.</p>
 <p>5. Install the C++ REST SDK package using Vcpkg. C++ REST SDK is a library for cloud-based client-server communication with modern API design.  Find out more about it <a href="https://github.com/microsoft/cpprestsdk">here</a>.</p>
 <p><strong>Note:</strong> This will take 15–25 minutes, depending on download speeds.</p>
 <div class="codehilite"><pre><span></span><code>vcpkg install cpprestsdk:x64-windows-static
@@ -895,13 +928,13 @@ cd build
 </code></pre></div>
 
 
-<p>8. Build rpc.exe using CMake.  The toolchain file allows us to use Vcpkg with CMake outside of an IDE.</p>
+<p>8. Build rpc.exe using CMake.</p>
 <div class="codehilite"><pre><span></span><code>cmake .. -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
 cmake --build . --config Debug
 </code></pre></div>
 
 
-<p>9. Navigate to the Release directory. In this directory, you should see rpc.exe.</p>
+<p>9. Navigate to the Debug directory. In this directory, you should see rpc.exe.</p>
 <div class="codehilite"><pre><span></span><code>cd Debug
 </code></pre></div>
 
@@ -916,6 +949,10 @@ cmake --build . --config Debug
 </code></pre></div>
 
 
+<div class="admonition note">
+<p class="admonition-title">Production Environment<p>In a production environment, an in-band agent would invoke this command with the parameters rather than a manual command.</p>
+</p>
+</div>
 <p><br></p>
 <blockquote>
 <p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
@@ -929,11 +966,11 @@ cmake --build . --config Debug
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>web_admin_user</strong></td>
+<td align="left"><strong>Username</strong></td>
 <td align="left">standalone</td>
 </tr>
 <tr>
-<td align="left"><strong>web_admin_password</strong></td>
+<td align="left"><strong>Password</strong></td>
 <td align="left">G@ppm0ym</td>
 </tr>
 </tbody>
@@ -943,7 +980,7 @@ cmake --build . --config Debug
 <h3 id="linux">Linux*<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <p>Follow these instructions to create RPC on Linux&ast;.</p>
 <h4 id="clone-the-repository_1">Clone the Repository<a class="headerlink" href="#clone-the-repository_1" title="Permanent link">&para;</a></h4>
-<p>1. On the Intel&reg; AMT device, open an elevated command line.</p>
+<p>1. On the Intel&reg; AMT device, open a terminal.</p>
 <p>2. Clone the RPC Repository.</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rpc.git
 </code></pre></div>
@@ -988,6 +1025,10 @@ cmake --build .
 </code></pre></div>
 
 
+<div class="admonition note">
+<p class="admonition-title">Production Environment<p>In a production environment, an in-band agent would invoke this command with the parameters rather than a manual command.</p>
+</p>
+</div>
 <p><br></p>
 <blockquote>
 <p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
@@ -1001,11 +1042,11 @@ cmake --build .
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>web_admin_user</strong></td>
+<td align="left"><strong>Username</strong></td>
 <td align="left">standalone</td>
 </tr>
 <tr>
-<td align="left"><strong>web_admin_password</strong></td>
+<td align="left"><strong>Password</strong></td>
 <td align="left">G@ppm0ym</td>
 </tr>
 </tbody>

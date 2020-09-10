@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quickstart-add-mps-ui-toolkit-controls-to-webui" class="md-skip">
+        <a href="#add-mps-ui-toolkit-controls-to-a-webui" class="md-skip">
           Skip to content
         </a>
       
@@ -412,8 +412,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#what-youll-need" class="md-nav__link">
+    What You'll Need
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-do" class="md-nav__link">
+    What You'll Do
   </a>
   
 </li>
@@ -430,15 +437,22 @@
     Add UI Toolkit
   </a>
   
-    <nav class="md-nav" aria-label="Add UI Toolkit">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-kvm-control" class="md-nav__link">
-    Add KVM Control
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-control-keyboard-video-mouse-redirection" class="md-nav__link">
+    Add a Control (Keyboard, Video, Mouse Redirection)
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#add-other-controls" class="md-nav__link">
+    Add Other Controls
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Other Controls">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#add-audit-log-control" class="md-nav__link">
@@ -779,8 +793,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#what-youll-need" class="md-nav__link">
+    What You'll Need
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-do" class="md-nav__link">
+    What You'll Do
   </a>
   
 </li>
@@ -797,15 +818,22 @@
     Add UI Toolkit
   </a>
   
-    <nav class="md-nav" aria-label="Add UI Toolkit">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-kvm-control" class="md-nav__link">
-    Add KVM Control
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-control-keyboard-video-mouse-redirection" class="md-nav__link">
+    Add a Control (Keyboard, Video, Mouse Redirection)
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#add-other-controls" class="md-nav__link">
+    Add Other Controls
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Other Controls">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#add-audit-log-control" class="md-nav__link">
@@ -918,27 +946,42 @@
                   
                 
                 
-                <h1 id="quickstart-add-mps-ui-toolkit-controls-to-webui">Quickstart: Add MPS UI Toolkit controls to WebUI<a class="headerlink" href="#quickstart-add-mps-ui-toolkit-controls-to-webui" title="Permanent link">&para;</a></h1>
-<p>This document shows how to integrate controls from the MPS UI Toolkit into a React.js app for testing or development.</p>
+                <h1 id="add-mps-ui-toolkit-controls-to-a-webui">Add MPS UI Toolkit controls to a WebUI<a class="headerlink" href="#add-mps-ui-toolkit-controls-to-a-webui" title="Permanent link">&para;</a></h1>
+<p>This document shows how to integrate controls from the MPS UI Toolkit into a React.js app for testing or development.  This guide walks through how to specifically implement the Keyboard, Video, Mouse (KVM) control. Example code for other manageability features are found below.</p>
+<h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
+<p><strong>Hardware</strong></p>
+<p>At minimum, to install and utilize the ActivEdge microservices, a network configuration must include:</p>
 <ul>
-<li>How to create a new React app</li>
-<li>How to add UI controls to the React app</li>
-<li>How to create bundles for each UI control</li>
+<li>A development PC with Windows 10 or Ubuntu 18.04 or newer</li>
+<li>At least one Intel® vPro device</li>
 </ul>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>The following tools and application must be installed on your development machine for this task:</p>
+<p><strong>Software</strong> </p>
 <ul>
-<li><a href="https://git-scm.com/">Git</a></li>
-<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> or any other IDE</li>
-<li><a href="https://nodejs.org/">Node.js</a></li>
 <li><a href="https://github.com/open-amt-cloud-toolkit/MPS">MPS</a>, the Management Presence Server</li>
 <li><a href="https://github.com/open-amt-cloud-toolkit/RCS">RPS</a>, the Remote Provisioning Server</li>
-<li>Intel&reg; AMT device, configured and connected to MPS</li>
-<li>Chrome* browser</li>
+<li>Intel&reg; vPro device, configured and connected to MPS</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Instructions on how to set up the MPS and RPS servers to connect a vPro device can be followed in the <a href="../../Local/overview/">Local</a> or <a href="../../Docker/overview/">Local Docker</a> Build and Deploy Guides.</p>
+</blockquote>
+<ul>
+<li>The <strong>development PC</strong> requires the following software:<ul>
+<li><a href="https://www.google.com/chrome">Chrome* Browser</a></li>
+<li><a href="https://git-scm.com/">git</a></li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> or any other IDE</li>
+<li><a href="https://nodejs.org/">Node.js</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
+<p>Follow the steps in these sections sequentially: </p>
+<ul>
+<li>Create a new React app</li>
+<li>Add UI controls to the React app</li>
 </ul>
 <p><a href="../../assets/images/HelloWorld.png"><img alt="UI Toolkit" src="../../assets/images/HelloWorld.png" /></a></p>
 <h2 id="create-a-new-react-app">Create a New React App<a class="headerlink" href="#create-a-new-react-app" title="Permanent link">&para;</a></h2>
-<p>1. At a command prompt, go to your preferred development directory.</p>
+<p>1. In a Command Prompt or Terminal, go to your preferred development directory.</p>
 <p>2. Run the following commands to create sample React app named <strong>my-app</strong>.</p>
 <div class="codehilite"><pre><span></span><code>npx create-react-app my-app
 cd my-app
@@ -946,34 +989,62 @@ npm start
 </code></pre></div>
 
 
-<blockquote>
-<p><strong>Note</strong>: By default, React apps run on port 3000. If port 3000 is already used by the MPS server or any other app, you'll be prompted to use another port. If this happens, enter 'Y'</p>
-<p>Output like the following should appear in the terminal window. By default, React launches in your machine's default browser. However for best experience, use a Chrome web browser.</p>
-</blockquote>
+<p>3. By default, React apps run on port 3000. If port 3000 is already used by the MPS server or any other app, you'll be prompted to use another port. If this happens, enter 'Y'</p>
+<p>Sample Output:</p>
 <div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
 Local: http://localhost:3001
 On Your Network: http://172.16.17.4:3001
 </code></pre></div>
 
 
-<p>3. Press <strong>Ctrl + C</strong> in the terminal window to exit the application.</p>
+<p>4. By default, React launches in your machine's default browser. However for best experience, navigate to the page using a Chrome web browser.</p>
+<p>5. Now that we know it is working, press <strong>Ctrl + C</strong> in the terminal window to exit the application.</p>
+<p><br></p>
 <h2 id="add-ui-toolkit">Add UI Toolkit<a class="headerlink" href="#add-ui-toolkit" title="Permanent link">&para;</a></h2>
 <p>1. To access UI controls in the React app, add the following line to dependencies section in <strong>my-app/package.json</strong>:</p>
-<div class="codehilite"><pre><span></span><code>&quot;ui-toolkit&quot;: &quot;git+https://github.com/open-amt-cloud-toolkit/ui-toolkit.git#AcivEdge&quot;
+<div class="codehilite"><pre><span></span><code>&quot;ui-toolkit&quot;: &quot;git+https://github.com/open-amt-cloud-toolkit/ui-toolkit.git#ActivEdge&quot;
 </code></pre></div>
 
 
-<p>2. At a command prompt, navigate to the root directory of the React app, and run the following commands to install ui-toolkit to node-modules and run the web UI locally:</p>
+<p>2. In a Command Prompt or Terminal, navigate to the root directory of the React app, <strong>./my-app</strong>.</p>
+<p>3. Run the following commands to install the ui-toolkit to node-modules and run the web UI locally:</p>
 <div class="codehilite"><pre><span></span><code>npm install
 npm start
 </code></pre></div>
 
 
-<h3 id="add-kvm-control">Add KVM Control<a class="headerlink" href="#add-kvm-control" title="Permanent link">&para;</a></h3>
-<p>The code snippet below adds KVM control to the React application. Open <strong>src/App.js</strong> and add it.</p>
-<blockquote>
-<p><strong>Note:</strong> Change the <strong>deviceId</strong> value to your device GUID, and the <strong>mpsServer</strong> value to your MPS server address and appropriate web port.</p>
-</blockquote>
+<p>Sample Output:</p>
+<div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
+Local: http://localhost:3001
+On Your Network: http://172.16.17.4:3001
+</code></pre></div>
+
+
+<p>3. Now that we know it is still working, press <strong>Ctrl + C</strong> in the terminal window to exit the application.</p>
+<p><br></p>
+<h2 id="add-a-control-keyboard-video-mouse-redirection">Add a Control (Keyboard, Video, Mouse Redirection)<a class="headerlink" href="#add-a-control-keyboard-video-mouse-redirection" title="Permanent link">&para;</a></h2>
+<p>The code snippet below adds KVM control to the React application. </p>
+<p>1. Open <strong>./my-app/src/App.js</strong> in a text editor or IDE of choice, such as Visual Studio Code or Notepad.</p>
+<p>2. Delete the current code and replace with the code snippet below.</p>
+<p>3. Change the following values:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>deviceId</strong></td>
+<td align="left">Replace the example deviceId value with the GUID of the Intel AMT device activated and connected to your MPS server. Information on obtaining a GUID can be found <a href="../../Topics/guids/">here</a>.</td>
+</tr>
+<tr>
+<td align="left"><strong>mpsServer</strong></td>
+<td align="left">Replace the <em>localhost</em> with the IP Address of your MPS Server</td>
+</tr>
+</tbody>
+</table>
 <div class="codehilite"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">logo</span> <span class="nx">from</span> <span class="s2">&quot;./logo.svg&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
@@ -987,7 +1058,7 @@ npm start
     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">MpsProvider</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="o">&gt;</span>
 <span class="hll">        <span class="o">&lt;</span><span class="nx">KVM</span> <span class="nx">deviceId</span><span class="o">=</span><span class="s2">&quot;038d0240-045c-05f4-7706-980700080009&quot;</span>
-</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:9300/relay&quot;</span>
+</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:3000/relay&quot;</span>
 </span>        <span class="nx">mouseDebounceTime</span><span class="o">=</span><span class="s2">&quot;200&quot;</span>
         <span class="nx">canvasHeight</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span>
         <span class="nx">canvasWidth</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="o">&gt;&lt;</span><span class="err">/KVM&gt;</span>
@@ -1000,6 +1071,26 @@ npm start
 </code></pre></div>
 
 
+<p><br></p>
+<p>4. Save and close the file.</p>
+<p>5. Navigate back to the root directory of the React app, <strong>./my-app</strong>.</p>
+<p>6. Start the React app:</p>
+<div class="codehilite"><pre><span></span><code>npm start
+</code></pre></div>
+
+
+<p>Sample Output:</p>
+<div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
+Local: http://localhost:3001
+On Your Network: http://172.16.17.4:3001
+</code></pre></div>
+
+
+<p>7. If the React app does not pop-up in a Chrome browser, open Chrome and navigate to the given URLs from your successful output.</p>
+<p><br></p>
+<p>You are now able to remotely control your Intel AMT device. Other controls such as device audit logs or profiles for RPS have example code below to test with.</p>
+<p><br></p>
+<h2 id="add-other-controls">Add Other Controls<a class="headerlink" href="#add-other-controls" title="Permanent link">&para;</a></h2>
 <h3 id="add-audit-log-control">Add Audit Log Control<a class="headerlink" href="#add-audit-log-control" title="Permanent link">&para;</a></h3>
 <p>The following code snippet shows how to add Audit Log control to the React application.
 Open <strong>src/App.js</strong>, add the following code as show below:</p>
@@ -1020,7 +1111,7 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
       <span class="o">&lt;</span><span class="nx">MpsProvider</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">AuditLog</span>
 <span class="hll">        <span class="nx">deviceId</span><span class="o">=</span><span class="s2">&quot;038d0240-045c-05f4-7706-980700080009&quot;</span>
-</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:9300&quot;</span><span class="o">&gt;&lt;</span><span class="err">/AuditLog&gt;</span>
+</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:3000&quot;</span><span class="o">&gt;&lt;</span><span class="err">/AuditLog&gt;</span>
 </span>      <span class="o">&lt;</span><span class="err">/MpsProvider&gt;</span>
     <span class="o">&lt;</span><span class="err">/div&gt;</span>
   <span class="p">);</span>
@@ -1048,7 +1139,7 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
     <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">MpsProvider</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">DeviceGrid</span>
-<span class="hll">          <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:9300&quot;</span><span class="o">&gt;&lt;</span><span class="err">/DeviceGrid&gt;</span>
+<span class="hll">          <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:3000&quot;</span><span class="o">&gt;&lt;</span><span class="err">/DeviceGrid&gt;</span>
 </span>      <span class="o">&lt;</span><span class="err">/MpsProvider&gt;</span>
     <span class="o">&lt;</span><span class="err">/div&gt;</span>
   <span class="p">);</span>
@@ -1076,7 +1167,7 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
     <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">MpsProvider</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="o">&gt;</span>
 <span class="hll">        <span class="o">&lt;</span><span class="nx">SOL</span> <span class="nx">deviceId</span><span class="o">=</span><span class="s2">&quot;038d0240-045c-05f4-7706-980700080009&quot;</span>
-</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:9300&quot;</span><span class="o">&gt;&lt;</span><span class="err">/SOL&gt;</span>
+</span><span class="hll">        <span class="nx">mpsServer</span><span class="o">=</span><span class="s2">&quot;localhost:3000&quot;</span><span class="o">&gt;&lt;</span><span class="err">/SOL&gt;</span>
 </span>      <span class="o">&lt;</span><span class="err">/MpsProvider&gt;</span>
     <span class="o">&lt;</span><span class="err">/div&gt;</span>
   <span class="p">);</span>
