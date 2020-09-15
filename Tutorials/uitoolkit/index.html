@@ -440,9 +440,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-control-keyboard-video-mouse-redirection" class="md-nav__link">
-    Add a Control (Keyboard, Video, Mouse Redirection)
+  <a href="#add-a-sample-control" class="md-nav__link">
+    Add a Sample Control
   </a>
+  
+    <nav class="md-nav" aria-label="Add a Sample Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-keyboard-video-mouse-kvm-redirection" class="md-nav__link">
+    Add Keyboard, Video, Mouse (KVM) Redirection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -509,33 +522,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#by-pass-cors-security-for-testing" class="md-nav__link">
-    By-pass CORS Security for testing
-  </a>
-  
-    <nav class="md-nav" aria-label="By-pass CORS Security for testing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mps" class="md-nav__link">
-    MPS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-rps-server-in-dev-mode" class="md-nav__link">
-    Run RPS server in DEV mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#customize-and-create-bundles" class="md-nav__link">
     Customize and create bundles
   </a>
@@ -553,6 +539,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apiTutorial/" title="Construct a Rest API Call" class="md-nav__link">
+      Construct a Rest API Call
+    </a>
   </li>
 
         
@@ -710,8 +708,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/mebx/" title="Manual Configuring Unprovisioning" class="md-nav__link">
-      Manual Configuring Unprovisioning
+    <a href="../../Topics/mebx/" title="Manual Configuring and Unprovisioning" class="md-nav__link">
+      Manual Configuring and Unprovisioning
     </a>
   </li>
 
@@ -821,9 +819,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-control-keyboard-video-mouse-redirection" class="md-nav__link">
-    Add a Control (Keyboard, Video, Mouse Redirection)
+  <a href="#add-a-sample-control" class="md-nav__link">
+    Add a Sample Control
   </a>
+  
+    <nav class="md-nav" aria-label="Add a Sample Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-keyboard-video-mouse-kvm-redirection" class="md-nav__link">
+    Add Keyboard, Video, Mouse (KVM) Redirection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -890,33 +901,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#by-pass-cors-security-for-testing" class="md-nav__link">
-    By-pass CORS Security for testing
-  </a>
-  
-    <nav class="md-nav" aria-label="By-pass CORS Security for testing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mps" class="md-nav__link">
-    MPS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-rps-server-in-dev-mode" class="md-nav__link">
-    Run RPS server in DEV mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#customize-and-create-bundles" class="md-nav__link">
     Customize and create bundles
   </a>
@@ -946,8 +930,8 @@
                   
                 
                 
-                <h1 id="add-mps-ui-toolkit-controls-to-a-webui">Add MPS UI Toolkit controls to a WebUI<a class="headerlink" href="#add-mps-ui-toolkit-controls-to-a-webui" title="Permanent link">&para;</a></h1>
-<p>This document shows how to integrate controls from the MPS UI Toolkit into a React.js app for testing or development.  This guide walks through how to specifically implement the Keyboard, Video, Mouse (KVM) control. Example code for other manageability features are found below.</p>
+                <h1 id="add-mps-ui-toolkit-controls-to-a-webui">Add MPS UI Toolkit Controls to a WebUI<a class="headerlink" href="#add-mps-ui-toolkit-controls-to-a-webui" title="Permanent link">&para;</a></h1>
+<p>This tutorial shows how to integrate controls from the MPS UI Toolkit into a React.js app for testing or development.  This guide walks through how to specifically implement the Keyboard, Video, Mouse (KVM) control. Example code for other manageability features are found below.</p>
 <h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
 <p><strong>Hardware</strong></p>
 <p>At minimum, to install and utilize the ActivEdge microservices, a network configuration must include:</p>
@@ -981,7 +965,8 @@
 </ul>
 <p><a href="../../assets/images/HelloWorld.png"><img alt="UI Toolkit" src="../../assets/images/HelloWorld.png" /></a></p>
 <h2 id="create-a-new-react-app">Create a New React App<a class="headerlink" href="#create-a-new-react-app" title="Permanent link">&para;</a></h2>
-<p>1. In a Command Prompt or Terminal, go to your preferred development directory.</p>
+<p>The React app can be created in any preferred development directory. The MPS can continue to run while creating and running the app.</p>
+<p>1. In a Command Prompt or Terminal, go to your preferred development directory. </p>
 <p>2. Run the following commands to create sample React app named <strong>my-app</strong>.</p>
 <div class="codehilite"><pre><span></span><code>npx create-react-app my-app
 cd my-app
@@ -989,6 +974,7 @@ npm start
 </code></pre></div>
 
 
+<p>After the npx command above, the terminal message "Happy hacking!" indicates success.</p>
 <p>3. By default, React apps run on port 3000. If port 3000 is already used by the MPS server or any other app, you'll be prompted to use another port. If this happens, enter 'Y'</p>
 <p>Sample Output:</p>
 <div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
@@ -1001,7 +987,7 @@ On Your Network: http://172.16.17.4:3001
 <p>5. Now that we know it is working, press <strong>Ctrl + C</strong> in the terminal window to exit the application.</p>
 <p><br></p>
 <h2 id="add-ui-toolkit">Add UI Toolkit<a class="headerlink" href="#add-ui-toolkit" title="Permanent link">&para;</a></h2>
-<p>1. To access UI controls in the React app, add the following line to dependencies section in <strong>my-app/package.json</strong>:</p>
+<p>1. To access UI controls in the React app, modify the <strong>may-app/package.json</strong> file with a preferred editor, such as Visual Studio Code or Notepad. In dependencies, place a comma after the last line and add the following line:</p>
 <div class="codehilite"><pre><span></span><code>&quot;ui-toolkit&quot;: &quot;git+https://github.com/open-amt-cloud-toolkit/ui-toolkit.git#ActivEdge&quot;
 </code></pre></div>
 
@@ -1020,9 +1006,11 @@ On Your Network: http://172.16.17.4:3001
 </code></pre></div>
 
 
-<p>3. Now that we know it is still working, press <strong>Ctrl + C</strong> in the terminal window to exit the application.</p>
 <p><br></p>
-<h2 id="add-a-control-keyboard-video-mouse-redirection">Add a Control (Keyboard, Video, Mouse Redirection)<a class="headerlink" href="#add-a-control-keyboard-video-mouse-redirection" title="Permanent link">&para;</a></h2>
+<h2 id="add-a-sample-control">Add a Sample Control<a class="headerlink" href="#add-a-sample-control" title="Permanent link">&para;</a></h2>
+<p>The following sections outline how to add controls. To use the code snippets provided, replace what is in <strong>App.js</strong> file with the code snippet.</p>
+<p>Refresh the app after adding a control.</p>
+<h3 id="add-keyboard-video-mouse-kvm-redirection">Add Keyboard, Video, Mouse (KVM) Redirection<a class="headerlink" href="#add-keyboard-video-mouse-kvm-redirection" title="Permanent link">&para;</a></h3>
 <p>The code snippet below adds KVM control to the React application. </p>
 <p>1. Open <strong>./my-app/src/App.js</strong> in a text editor or IDE of choice, such as Visual Studio Code or Notepad.</p>
 <p>2. Delete the current code and replace with the code snippet below.</p>
@@ -1091,6 +1079,8 @@ On Your Network: http://172.16.17.4:3001
 <p>You are now able to remotely control your Intel AMT device. Other controls such as device audit logs or profiles for RPS have example code below to test with.</p>
 <p><br></p>
 <h2 id="add-other-controls">Add Other Controls<a class="headerlink" href="#add-other-controls" title="Permanent link">&para;</a></h2>
+<p>The following sections outline how to add controls. To use the code snippets provided, replace what is in <strong>App.js</strong> file with the code snippet.</p>
+<p>Refresh the app after adding a control.</p>
 <h3 id="add-audit-log-control">Add Audit Log Control<a class="headerlink" href="#add-audit-log-control" title="Permanent link">&para;</a></h3>
 <p>The following code snippet shows how to add Audit Log control to the React application.
 Open <strong>src/App.js</strong>, add the following code as show below:</p>
@@ -1268,20 +1258,24 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
 <p>You will see the errors in the following scenario's:</p>
 <ul>
 <li>compilation errors if ui-toolkit has not downloaded and installed to your react app.</li>
-<li>MPS server not running</li>
+<li>MPS/RPS server not running, appropriate controls fail to work.</li>
 <li>MPS server running and device not connected.</li>
 <li>If your browser is IE / Edge, there might be some compatibility issues.</li>
 </ul>
-<h2 id="by-pass-cors-security-for-testing">By-pass CORS Security for testing<a class="headerlink" href="#by-pass-cors-security-for-testing" title="Permanent link">&para;</a></h2>
-<h3 id="mps">MPS<a class="headerlink" href="#mps" title="Permanent link">&para;</a></h3>
-<p>To display UI controls on local react Web UI for <strong>testing</strong>, make the following changes to by-pass CORS.</p>
-<ul>
-<li>Go to your local <strong>mps</strong> application where it is running.</li>
-<li>Press <strong>ctrl+c</strong> to exit the application.</li>
-<li>Edit the file <strong>mps/src/server/webserver.ts</strong></li>
-<li>Update the code as shown below to allow any origin by MPS</li>
-</ul>
-<p>Search for <strong>X-Frame-Options</strong> and update the code as shown below</p>
+<!-- ## By-pass CORS Security for testing
+
+### MPS
+
+To display UI controls on local react Web UI for **testing**, make the following changes to by-pass CORS.
+
+- Go to your local **mps** application where it is running.
+- Press **ctrl+c** to exit the application.
+- Edit the file **mps/src/server/webserver.ts**
+- Update the code as shown below to allow any origin by MPS
+
+Search for **X-Frame-Options** and update the code as shown below
+
+
 <div class="codehilite"><pre><span></span><code><span class="c1">//Clickjacking defence</span>
 <span class="k">this</span><span class="p">.</span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">//res.setHeader(&#39;X-Frame-Options&#39;, &#39;SAMEORIGIN&#39;);</span>
@@ -1296,7 +1290,10 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
 </code></pre></div>
 
 
-<p>Search for <strong>isAuthenticated</strong> and comment the code as shown below</p>
+
+Search for **isAuthenticated** and comment the code as shown below
+
+
 <div class="codehilite"><pre><span></span><code><span class="nx">isAuthenticated</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
 
 <span class="c1">// if (req.session.loggedin){</span>
@@ -1322,37 +1319,36 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
 </code></pre></div>
 
 
-<ul>
-<li>
-<p>Save the changes.</p>
-</li>
-<li>
-<p>At the command prompt, run the below command from the root of <strong>mps</strong> application</p>
-</li>
-</ul>
+
+- Save the changes.
+
+- At the command prompt, run the below command from the root of **mps** application
+
+
 <div class="codehilite"><pre><span></span><code>npm start
+``` --&gt;
+
+&lt;!-- ## Run RPS server in DEV mode
+
+To display UI controls on local react Web UI for **testing**, make the following changes.
+
+- Go to your local **rps** application where it is running.
+- Press **ctrl+c** to exit the application.
+- Edit the file **rps/.rpsrc**
+
+Update the _xapikey_ value with below snippet
 </code></pre></div>
 
 
-<h2 id="run-rps-server-in-dev-mode">Run RPS server in DEV mode<a class="headerlink" href="#run-rps-server-in-dev-mode" title="Permanent link">&para;</a></h2>
-<p>To display UI controls on local react Web UI for <strong>testing</strong>, make the following changes.</p>
-<ul>
-<li>Go to your local <strong>rps</strong> application where it is running.</li>
-<li>Press <strong>ctrl+c</strong> to exit the application.</li>
-<li>Edit the file <strong>rps/.rpsrc</strong></li>
-</ul>
-<p>Update the <em>xapikey</em> value with below snippet</p>
-<div class="codehilite"><pre><span></span><code>&quot;xapikey&quot;: &quot;APIKEYFORRPS123!&quot;
+"xapikey": "APIKEYFORRPS123!"
+
+<div class="codehilite"><pre><span></span><code>- Save the changes.
+- At the command prompt, run the below command from the root of **rps** application
 </code></pre></div>
 
 
-<ul>
-<li>Save the changes.</li>
-<li>At the command prompt, run the below command from the root of <strong>rps</strong> application</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>npm run dev
-</code></pre></div>
-
+npm run dev
+``` -->
 
 <h2 id="customize-and-create-bundles">Customize and create bundles<a class="headerlink" href="#customize-and-create-bundles" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1399,13 +1395,13 @@ Open <strong>src/App.js</strong>, add the following code as show below:</p>
           </a>
         
         
-          <a href="../acmActivation/" title="Activating in ACM Mode" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../apiTutorial/" title="Construct a Rest API Call" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Activating in ACM Mode
+                Construct a Rest API Call
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

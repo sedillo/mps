@@ -440,6 +440,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-up" class="md-nav__link">
+    Next up
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -505,6 +512,18 @@
   <li class="md-nav__item">
     <a href="../../Tutorials/uitoolkit/" title="Creating Consoles with the UI Toolkit" class="md-nav__link">
       Creating Consoles with the UI Toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/apiTutorial/" title="Construct a Rest API Call" class="md-nav__link">
+      Construct a Rest API Call
     </a>
   </li>
 
@@ -663,8 +682,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/mebx/" title="Manual Configuring Unprovisioning" class="md-nav__link">
-      Manual Configuring Unprovisioning
+    <a href="../../Topics/mebx/" title="Manual Configuring and Unprovisioning" class="md-nav__link">
+      Manual Configuring and Unprovisioning
     </a>
   </li>
 
@@ -838,6 +857,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-up" class="md-nav__link">
+    Next up
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -861,8 +887,9 @@
 <li>30 minutes on Windows 10 devices (20-25 minutes are required installation time estimates)</li>
 <li>15 minutes on Linux devices</li>
 </ul>
+<p>For prequisites to complete this section, see <a href="overview.md">Overview</a>.</p>
 <h2 id="remote-provisioning-client">Remote Provisioning Client<a class="headerlink" href="#remote-provisioning-client" title="Permanent link">&para;</a></h2>
-<p>The Remote Provisioning Client (RPC) communicates with the Managability Engine Interface (MEI) and RPS interfaces. The MEI uses the ME Driver to talk to Intel AMT. By running RPC, we will activate Intel AMT into Client Control Mode (CCM), or ACM based on the created profile, as well as configure the CIRA connection of the AMT device to the MPS. After successfully running, the AMT device will be ready to be managed remotely using the web server!</p>
+<p>The Remote Provisioning Client (RPC) communicates with the Managability Engine Interface (MEI) and RPS interfaces. The MEI uses the ME Driver to talk to Intel AMT. By running RPC, we will activate Intel AMT into Client Control Mode (CCM), or ACM based on the created profile, as well as configure the CIRA connection of the AMT device to the MPS. After successfully running, the AMT device will be ready to be managed remotely using the web interface!</p>
 <div class="admonition note">
 <p class="admonition-title">Production Environment<p>In a production environment, RPC would be built on a development device. From there, RPC can be deployed with an in-band manageability agent to distrubute it to the fleet of AMT devices.  The in-band managebility agent can invoke RPC to run and activate the AMT devices.</p>
 </p>
@@ -870,12 +897,12 @@
 <p><a href="../../assets/images/RPC_Overview.png"><img alt="RPC" src="../../assets/images/RPC_Overview.png" /></a></p>
 <h3 id="windows">Windows*<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p><strong>Important: Perform the following steps on the Intel&reg; AMT device. Enter the commands in the following sections to create RPC on Windows.</strong></p>
-<p>Navigate to a directory of your choice to clone and build RPC.</p>
 <h4 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h4>
-<p>1. Open the 'X64 Native Tools command prompt for VS 20XX' as Administrator.</p>
+<p>1. Open the 'x64 Native Tools Command Prompt for VS 20XX' as Administrator.</p>
 <blockquote>
-<p><strong>Note:</strong> You can find this command prompt in the Start Menu or in the following directory path:<code>./Programs/Visual Studio 2019/Visual Studio Tools/VC</code></p>
+<p><strong>Note:</strong> You can find this command prompt in the Start Menu by searching for 'x64 Native Tools Command Prompt for VS 20XX'</p>
 </blockquote>
+<p>Navigate to a directory of your choice to clone and build RPC.</p>
 <p>2. Clone the RPC repository.</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rpc.git
 </code></pre></div>
@@ -955,6 +982,7 @@ cmake --build . --config Debug
 </div>
 <p><br></p>
 <blockquote>
+<p>Note: Unable to connect to Websocket server? Try disabling firewalls on the development device.</p>
 <p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
 <p><strong>Default login credentials:</strong></p>
 <table>
@@ -1031,6 +1059,7 @@ cmake --build .
 </div>
 <p><br></p>
 <blockquote>
+<p>Note: Unable to connect to Websocket server? Try disabling firewalls on the development device.</p>
 <p>Note: If you do not remember your created profile's name, you can navigate to the <em>Profiles</em> tab on the web server hosted at <code>https://[Development-IP-Address]:3000</code></p>
 <p><strong>Default login credentials:</strong></p>
 <table>
@@ -1053,7 +1082,8 @@ cmake --build .
 </table>
 </blockquote>
 <p><br></p>
-<p>Next up: <a href="../manageDevice/">Manage Device</a></p>
+<h2 id="next-up">Next up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
+<p><a href="../manageDevice/">Manage Device</a></p>
                 
               
               

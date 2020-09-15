@@ -427,6 +427,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Tutorials/apiTutorial/" title="Construct a Rest API Call" class="md-nav__link">
+      Construct a Rest API Call
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Tutorials/acmActivation/" title="Activating in ACM Mode" class="md-nav__link">
       Activating in ACM Mode
     </a>
@@ -575,8 +587,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/mebx/" title="Manual Configuring Unprovisioning" class="md-nav__link">
-      Manual Configuring Unprovisioning
+    <a href="../../Topics/mebx/" title="Manual Configuring and Unprovisioning" class="md-nav__link">
+      Manual Configuring and Unprovisioning
     </a>
   </li>
 
@@ -709,18 +721,20 @@
 <p><br></p>
 <p>4. Click the devices tab from the menu on the left, or click <em>Connected</em> in the default homepage.</p>
 <blockquote>
-<p><strong>Note:</strong> If the activated device is not listed or seen, restart the AMT device. After succesfully restarting, refresh the WebUI to see if the <em>Status</em> changes to <em>Connected</em> and turns green.</p>
+<p><strong>Note:</strong> If the activated device is not listed or if it is listed as unconnected, unplug the power of the AMT device and boot the machine. After succesfully restarting, refresh the WebUI to see if the <em>Status</em> changes to <em>Connected</em> and turns green.</p>
 </blockquote>
 <p><a href="../../assets/images/MPS_ConnectedDevice.png"><img alt="mps" src="../../assets/images/MPS_ConnectedDevice.png" /></a></p>
 <p>5. Select the checkbox by the connected device you want to manage.</p>
 <p>6. Select an action to perform from the options on the right.</p>
 <blockquote>
-<p><strong>Note:</strong> Since the device was activated the device in Client Control Mode(CCM), the KVM feature will not function in this current release. To use KVM, follow the <a href="../../Tutorials/acmActivation/">ACM Activation Tutorial</a> to see how to configure a device into Admin Control Mode and remotely KVM using out-of-band capabilities.</p>
+<p><strong>Note:</strong> Since the device was activated in Client Control Mode(CCM), the KVM feature will not function in this current release. To use KVM, follow the <a href="../../Tutorials/acmActivation/">ACM Activation Tutorial</a> to see how to configure a device into Admin Control Mode.</p>
+<p><strong>Note:</strong> Activated in Admin Control Mode already? Try out the Keyboard, Video, Mouse (KVM) feature to remotely view and control the AMT device.  Issue a Reset to BIOS command and be able to view and make live changes to BIOS settings.</p>
 </blockquote>
 <p><a href="../../assets/images/MPS_ManageDevice.png"><img alt="mps" src="../../assets/images/MPS_ManageDevice.png" /></a></p>
 <p><br></p>
 <p>Next steps: </p>
 <ul>
+<li>Learn how to construct your own API call to manage a device <a href="../../Tutorials/apiTutorial/">here</a></li>
 <li>Find out about the ActivEdge <a href="../../Tutorials/uitoolkit/">UI Toolkit</a> and more under Tutorials.</li>
 <li>Read about security recommendations and other ActivEdge features under Topics.</li>
 </ul>

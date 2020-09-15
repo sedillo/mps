@@ -391,6 +391,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Tutorials/apiTutorial/" title="Construct a Rest API Call" class="md-nav__link">
+      Construct a Rest API Call
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Tutorials/acmActivation/" title="Activating in ACM Mode" class="md-nav__link">
       Activating in ACM Mode
     </a>
@@ -513,8 +525,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#base-path" class="md-nav__link">
-    Base path
+  <a href="#base-paths" class="md-nav__link">
+    Base paths
   </a>
   
 </li>
@@ -626,8 +638,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Topics/mebx/" title="Manual Configuring Unprovisioning" class="md-nav__link">
-      Manual Configuring Unprovisioning
+    <a href="../../Topics/mebx/" title="Manual Configuring and Unprovisioning" class="md-nav__link">
+      Manual Configuring and Unprovisioning
     </a>
   </li>
 
@@ -724,8 +736,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#base-path" class="md-nav__link">
-    Base path
+  <a href="#base-paths" class="md-nav__link">
+    Base paths
   </a>
   
 </li>
@@ -780,11 +792,12 @@
                 
                 <h1 id="api-and-command-reference">API and Command Reference<a class="headerlink" href="#api-and-command-reference" title="Permanent link">&para;</a></h1>
 <p>This section is a reference to the MPS API methods available in ActivEdge, and to some commands it provides. </p>
-<p>There are two types of methods for the MPS Server:</p>
+<p>There are two types of method paths for the MPS Server:</p>
 <ul>
-<li>AMT methods - Allow you to send device-specific calls for things such as power actions or audit logs</li>
-<li>Admin methods - Allow you to send calls for info for all devices or some MPS configuration information.</li>
+<li>AMT path methods - Allow you to send device-specific calls for things such as power actions or audit logs. Utilize these methods by setting the path to <strong>amt</strong> in your API call.</li>
+<li>Admin path methods - Allow you to send calls for info for all devices or for MPS configuration information. Utilize these methods by setting the path to <strong>admin</strong> in your API call.</li>
 </ul>
+<p>Steps on how to create your own Rest API call can be found in the <a href="../../Tutorials/apiTutorial/">Construct a Rest API Call</a> tutorial.</p>
 <h2 id="how-to-use-the-rest-api">How to Use the REST API<a class="headerlink" href="#how-to-use-the-rest-api" title="Permanent link">&para;</a></h2>
 <h3 id="request-url">Request URL<a class="headerlink" href="#request-url" title="Permanent link">&para;</a></h3>
 <p>The request URL is assembled using your MPS server's IP Address, the port, and the base path for the method you would like to run. The tables below explore what methods are accessible for each base path.</p>
@@ -792,7 +805,7 @@
 </code></pre></div>
 
 
-<h3 id="base-path">Base path<a class="headerlink" href="#base-path" title="Permanent link">&para;</a></h3>
+<h3 id="base-paths">Base paths<a class="headerlink" href="#base-paths" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">/amt/</span>
 <span class="l l-Scalar l-Scalar-Plain">/admin/</span>
 </code></pre></div>
