@@ -784,7 +784,7 @@
 <p>3. Copy and paste the example code below.</p>
 <p>4. Replace <em>MPS-Server-IP-Address</em> with the IP Address of your development device or MPS server.</p>
 <blockquote>
-<p><strong>Note:</strong> The AllDevices method uses the <strong>admin</strong> path (line 11). MPS methods use either <strong>admin</strong> or <strong>amt</strong> as the path. View the difference and all MPS methods <a href="../../APIs/indexMPS/">here</a>.</p>
+<p><strong>Note:</strong> The ConnectedDevices method uses the <strong>admin</strong> path (line 14). MPS methods use either <strong>admin</strong> or <strong>amt</strong> as the path. View the difference and all MPS methods <a href="../../APIs/indexMPS/">here</a>.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="kr">const</span> <span class="nx">https</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">)</span>
 <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">[</span><span class="s1">&#39;NODE_TLS_REJECT_UNAUTHORIZED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
@@ -838,12 +838,12 @@
 <p>Example Response:</p>
 <p><strong>Important Note:</strong> This is one way to retrieve a device's GUID in the <em>host</em> field.  <strong>For <em>amt</em> path methods (i.e. Power Actions, Audit Logs, etc), the device GUID is <em>required</em> as part of the POST data.</strong> Save this value if you want to try other MPS methods. Other ways to retrieve a GUID can be found <a href="../../Topics/guids/">here</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">[{</span>
-             <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;d12428be-9fa1-4226-9784-54b2038beab6&quot;</span><span class="p">,</span>
-             <span class="nt">&quot;amtuser&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-             <span class="nt">&quot;mpsuser&quot;</span><span class="p">:</span> <span class="s2">&quot;standalone&quot;</span><span class="p">,</span>
-             <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-             <span class="nt">&quot;conn&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-             <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;d12428be-9fa1-4226-9784-54b2038beab6&quot;</span>
+        <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;d12428be-9fa1-4226-9784-54b2038beab6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amtuser&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;mpsuser&quot;</span><span class="p">:</span> <span class="s2">&quot;standalone&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;conn&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;d12428be-9fa1-4226-9784-54b2038beab6&quot;</span>
 <span class="p">}]</span>
 </code></pre></div>
 
