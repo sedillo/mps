@@ -675,16 +675,18 @@
 <p><strong>Important Note:</strong> More information on obtaining an AMT device's GUID can be found <a href="../../../Topics/guids/">here</a>.</p>
 <p><strong>Note:</strong> The following code block is an example of what would be the data sent as part of the POST request. </p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">{</span>  
-   <span class="s">&quot;method&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;AuditLog&quot;</span><span class="p p-Indicator">,</span>
-   <span class="s">&quot;payload&quot;</span><span class="p p-Indicator">:{</span>  
-      <span class="s">&quot;guid&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;038d0240-045c-05f4-7706-980700080009&quot;</span><span class="p p-Indicator">,</span> <span class="nv">//Replace with an AMT Device&#39;s GUID</span>
-      <span class="nv">&quot;logsPerPage&quot;</span><span class="p p-Indicator">:</span><span class="nv">10</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;page&quot;</span><span class="p p-Indicator">:</span><span class="nv">5</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;startDate&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;2019-04-11&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;endDate&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;2019-04-18&quot;</span>
-   <span class="p p-Indicator">}</span>
-<span class="p p-Indicator">}</span>
+<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">//amt method</span>
+
+<span class="l l-Scalar l-Scalar-Plain">{</span>  
+   <span class="l l-Scalar l-Scalar-Plain">&quot;method&quot;:&quot;AuditLog&quot;,</span>
+   <span class="l l-Scalar l-Scalar-Plain">&quot;payload&quot;:{</span>  
+      <span class="l l-Scalar l-Scalar-Plain">&quot;guid&quot;:&quot;038d0240-045c-05f4-7706-980700080009&quot;, //Replace with an AMT Device&#39;s GUID</span>
+      <span class="l l-Scalar l-Scalar-Plain">&quot;logsPerPage&quot;:10,</span>
+      <span class="l l-Scalar l-Scalar-Plain">&quot;page&quot;:5,</span>
+      <span class="l l-Scalar l-Scalar-Plain">&quot;startDate&quot;:&quot;2019-04-11&quot;,</span>
+      <span class="l l-Scalar l-Scalar-Plain">&quot;endDate&quot;:&quot;2019-04-18&quot;</span>
+   <span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="l l-Scalar l-Scalar-Plain">}</span>
 </code></pre></div>
 
 

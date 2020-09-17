@@ -756,14 +756,14 @@
 <p>The image below illustrates how the Intel&reg; AMT device connects to MPS for remote management.</p>
 <p><a href="../../assets/images/MPS_Overview.png"><img alt="MPS" src="../../assets/images/MPS_Overview.png" /></a></p>
 <h3 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
-<p>Navigate to a directory of your choice for development.</p>
-<p>1. Clone the MPS repository and navigate to it with the following commands:</p>
+<p>1. Open a Command Prompt or Terminal and navigate to a directory of your choice for development.</p>
+<p>2. Clone the MPS repository and navigate to it with the following commands:</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/mps.git
 cd mps
 </code></pre></div>
 
 
-<p>2. Checkout the ActivEdge branch.</p>
+<p>3. Checkout the ActivEdge branch.</p>
 <div class="codehilite"><pre><span></span><code>git checkout ActivEdge
 </code></pre></div>
 
@@ -786,7 +786,7 @@ cd mps
 <td align="left">A value of false disables the allowlist functionaliy. For information about allowlist, see the allowlist <a href="../../Tutorials/allowlist/">tutorial.</a></td>
 </tr>
 <tr>
-<td align="left"><strong>commonName</strong></td>
+<td align="left"><strong>common_name</strong></td>
 <td align="left">Development device's IP address. For this guide, you <strong>cannot</strong> use localhost</td>
 <td align="left">This address will be used in self-signed certificate. It may be an IP address or FQDN in real world deployment</td>
 </tr>
@@ -862,7 +862,7 @@ cd mps
 </code></pre></div>
 
 
-<p>4. Navigate back to the MPS root directory.</p>
+<p>4. Navigate back to the <code>./mps</code> root directory.</p>
 <p>5. Run the install commands to install all required dependencies.</p>
 <div class="codehilite"><pre><span></span><code>npm install
 </code></pre></div>

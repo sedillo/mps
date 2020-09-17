@@ -728,15 +728,9 @@
 <p>The image below illustrates how RPS activates an Intel&reg; AMT device for remote management. In this section, we will see how to deploy number two, RPS.</p>
 <p><a href="../../assets/images/RPS_Overview.png"><img alt="RPS" src="../../assets/images/RPS_Overview.png" /></a></p>
 <h3 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
-<p>1. Open a new Command Prompt as Administrator or a Terminal.</p>
+<p>1. Open a new Command Prompt or a Terminal. The MPS server will continue to run in your previous Command Prompt or Terminal.</p>
 <p>2. Clone the RPS repository to the same parent directory where the mps directory is located. Enter the following command:</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rps.git
-cd rps
-</code></pre></div>
-
-
-<p>3. Checkout the ActivEdge branch.</p>
-<div class="codehilite"><pre><span></span><code>git checkout ActivEdge
 </code></pre></div>
 
 
@@ -744,6 +738,12 @@ cd rps
 <div class="codehilite"><pre><span></span><code>📦parent
  ┣ 📂mps
  ┗ 📂rps
+</code></pre></div>
+
+
+<p>3. Checkout the ActivEdge branch.</p>
+<div class="codehilite"><pre><span></span><code>cd rps
+git checkout ActivEdge
 </code></pre></div>
 
 

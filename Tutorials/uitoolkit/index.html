@@ -975,22 +975,9 @@
 <p>2. Run the following commands to create sample React app named <strong>my-app</strong>.</p>
 <div class="codehilite"><pre><span></span><code>npx create-react-app my-app
 cd my-app
-npm start
 </code></pre></div>
 
 
-<p>After the npx command above, the terminal message "Happy hacking!" indicates success.</p>
-<p>3. By default, React apps run on port 3000. If port 3000 is already used by the MPS server or any other app, you'll be prompted to use another port. If this happens, enter 'Y'</p>
-<p>Sample Output:</p>
-<div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
-Local: http://localhost:3001
-On Your Network: http://172.16.17.4:3001
-</code></pre></div>
-
-
-<p>4. By default, React launches in your machine's default browser. However for best experience, navigate to the page using a Chrome web browser.</p>
-<p>5. Now that we know it is working, press <strong>Ctrl + C</strong> twice and type 'Y' in the terminal window to exit the application.</p>
-<p><br></p>
 <h2 id="add-ui-toolkit">Add UI Toolkit<a class="headerlink" href="#add-ui-toolkit" title="Permanent link">&para;</a></h2>
 <p>1. To access UI controls in the React app, modify the <strong>./my-app/package.json</strong> file with a preferred editor, such as Visual Studio Code or Notepad. In dependencies, place a comma after the last line and add the following line:</p>
 <div class="codehilite"><pre><span></span><code>&quot;ui-toolkit&quot;: &quot;git+https://github.com/open-amt-cloud-toolkit/ui-toolkit.git#ActivEdge&quot;
@@ -998,13 +985,13 @@ On Your Network: http://172.16.17.4:3001
 
 
 <p>2. Save and close the file.</p>
-<p>3. In a Command Prompt or Terminal, navigate to the root directory of the React app, <strong>./my-app</strong>.</p>
-<p>4. Run the following commands to install the ui-toolkit to node-modules and run the web UI locally:</p>
+<p>3. Run the following commands to install the ui-toolkit to node-modules and run the web UI locally:</p>
 <div class="codehilite"><pre><span></span><code>npm install
 npm start
 </code></pre></div>
 
 
+<p>4. By default, React apps run on port 3000. If port 3000 is already used by the MPS server or any other application, you'll be prompted to use another port. If this happens, enter 'Y'.</p>
 <p>Sample Output:</p>
 <div class="codehilite"><pre><span></span><code>You can now view my-app in the browser.
 Local: http://localhost:3001
@@ -1012,6 +999,7 @@ On Your Network: http://172.16.17.4:3001
 </code></pre></div>
 
 
+<p>5. By default, React launches in your machine's default browser. However for best experience, navigate to the page using a Chrome web browser.</p>
 <blockquote>
 <p><strong>Note:</strong> You do not need to stop the application again. It will update and refresh automatically as you make code changes.</p>
 </blockquote>
@@ -1070,7 +1058,7 @@ On Your Network: http://172.16.17.4:3001
 
 <p><br></p>
 <p>4. Save and close the file.</p>
-<p>5. If the React app does not pop-up in a Chrome browser, open Chrome and navigate to the given URLs from your successful output.</p>
+<p>5. If the React app is still open in the browser and hasn't updated, refresh the page. If not already open, open Chrome and navigate to the given URLs from your successful output. By default it is <code>https://localhost:3001</code> if MPS is running on Port 3000 already.</p>
 <p><br></p>
 <p>You are now able to remotely control your Intel AMT device. Other controls such as device audit logs or profiles for RPS have example code below to test with.</p>
 <p><br></p>

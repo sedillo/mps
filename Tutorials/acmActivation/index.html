@@ -808,10 +808,12 @@
 <p><strong>Note:</strong> If you'd prefer to activate the device into Admin Control Mode (ACM), click <a href="./">here</a>.</p>
 </blockquote>
 <p>8. Click Create.</p>
-<p><a href="../../assets/images/RPS_CreateProfile_ACM.png"><img alt="RPS" src="../../assets/images/RPS_CreateProfile_ACM.png" /></a></p>
+<p><a href="../../assets/images/RPS_CreateProfile_ACM.png"><img alt="RPS ACM Profile" src="../../assets/images/RPS_CreateProfile_ACM.png" /></a></p>
 <p><br></p>
 <h3 id="create-a-domain">Create a Domain<a class="headerlink" href="#create-a-domain" title="Permanent link">&para;</a></h3>
 <p>In addition to creating a CIRA Config and a Profile. A Domain <strong>must</strong> be created to activate a device into Admin Control Mode.</p>
+<p>Intel AMT checks the network domain suffix against the provisioning certificate as a security check. During provisioning, the trusted certificate chain is injected into the AMT firmware.  AMT verifies that the certificate chain is complete and is signed by a trusted certificate authority.</p>
+<p><br></p>
 <p>1. Select the Domains tab from the left-hand menu.</p>
 <p>2. In the top-right corner, click New.</p>
 <p><a href="../../assets/images/RPS_NewDomain.png"><img alt="RPS New Domain" src="../../assets/images/RPS_NewDomain.png" /></a></p>
@@ -821,9 +823,9 @@
 <p>5. Click Browse and select your purchased Provisioning Certificate.  This certificate must contain the private key.</p>
 <p>6. Provide the Password of the Provisioning Certificate used to encrypt the .pfx file.</p>
 <p>7. Click Create.</p>
-<p>After successfully creating the domain, continue with the activation process by building and running the Remote Provisioning Client.</p>
 <p>Example Domain:</p>
 <p><a href="../../assets/images/RPS_CreateDomain.png"><img alt="RPS Domain Creation" src="../../assets/images/RPS_CreateDomain.png" /></a></p>
+<p>After successfully creating the domain, continue with the activation process by building and running the Remote Provisioning Client (RPC).</p>
 <p><br></p>
 <h2 id="next-up">Next Up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
 <p><a href="../../General/buildRPC/">Build RPC on a Managed Device</a></p>
