@@ -36,7 +36,7 @@
     
     
       
-        <title>See Connected Devices - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
+        <title>Create a CIRA Config - ActivEdge: Smart Building Blocks for Remote Edge Management</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#manage-the-intel-amt-device-using-mps" tabindex="1" class="md-skip">
+      <a href="#create-a-cira-config" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                See Connected Devices
+                Create a CIRA Config
               
             </span>
           
@@ -296,10 +296,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       RPS Configuration
@@ -327,11 +329,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../createCIRAConfig/" title="Create a CIRA Config" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Create a CIRA Config
+      </label>
+    
+    <a href="./" title="Create a CIRA Config" class="md-nav__link md-nav__link--active">
       Create a CIRA Config
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-cira-config" title="Create a CIRA Config" class="md-nav__link">
+    Create a CIRA Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-up" title="Next up" class="md-nav__link">
+    Next up
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -404,12 +447,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       MPS Device Management
@@ -425,52 +466,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        See Connected Devices
-      </label>
-    
-    <a href="./" title="See Connected Devices" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../manageDevice/" title="See Connected Devices" class="md-nav__link">
       See Connected Devices
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manage-the-intel-amt-device-using-mps" title="Manage the Intel&reg; AMT Device using MPS" class="md-nav__link">
-    Manage the Intel&reg; AMT Device using MPS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" title="Next steps" class="md-nav__link">
-    Next steps
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -750,15 +750,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manage-the-intel-amt-device-using-mps" title="Manage the Intel&reg; AMT Device using MPS" class="md-nav__link">
-    Manage the Intel&reg; AMT Device using MPS
+  <a href="#create-a-cira-config" title="Create a CIRA Config" class="md-nav__link">
+    Create a CIRA Config
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" title="Next steps" class="md-nav__link">
-    Next steps
+  <a href="#next-up" title="Next up" class="md-nav__link">
+    Next up
   </a>
   
 </li>
@@ -780,14 +780,19 @@
               
                 
                 
-                  <h1>See Connected Devices</h1>
+                  <h1>Create a CIRA Config</h1>
                 
-                <p>Estimated completion time: 5 minutes</p>
-<h2 id="manage-the-intel-amt-device-using-mps">Manage the Intel&reg; AMT Device using MPS<a class="headerlink" href="#manage-the-intel-amt-device-using-mps" title="Permanent link">&para;</a></h2>
-<p>1. On your development device, browse to the web server using the development device's IP Address.</p>
-<p><strong>Example URL:</strong> https://[Development-IP-Address]:3000</p>
-<p>2. Log in with the default credentials below.</p>
-<p><strong>Default credentials:</strong></p>
+                <h2 id="create-a-cira-config">Create a CIRA Config<a class="headerlink" href="#create-a-cira-config" title="Permanent link">&para;</a></h2>
+<p>CIRA stands for Client Initiated Remote Access.  It allows a CIRA-capable edge device to reach out and establish a persistent connection to the MPS server rather than the MPS server reaching to the edge device.  This enables access to edge devices that might be harder to reach behind things such as firewalls/NATs/etc.</p>
+<p>A CIRA Configuration provides the Remote Provisioning Client (RPC) the required info to establish the edge device's CIRA connection to the MPS Server during the activation process.  </p>
+<p><br></p>
+<p>1. Select the CIRA Configs tab from the left-hand menu.</p>
+<p>2. In the top-right corner, click New.</p>
+<p><a href="../../assets/images/RPS_NewCIRAConfig.png"><img alt="RPS" src="../../assets/images/RPS_NewCIRAConfig.png" /></a></p>
+<p>3. Specify a Config Name of your choice.</p>
+<p>4. Select IPV4, and provide your Development Device's IP Address.</p>
+<p>5. Set Port to the default, 4433.</p>
+<p>6. Set User Name and Password to the following:</p>
 <table>
 <thead>
 <tr>
@@ -797,7 +802,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>Username</strong></td>
+<td align="left"><strong>User Name</strong></td>
 <td align="left">standalone</td>
 </tr>
 <tr>
@@ -806,30 +811,16 @@
 </tr>
 </tbody>
 </table>
-<p>3. After logging in, click on Management Presence Server. If already logged in, click the Home icon in the top left corner.</p>
-<p><a href="../../assets/images/WebUI_HomeMPS.png"><img alt="WebUI" src="../../assets/images/WebUI_HomeMPS.png" /></a></p>
-<p><br></p>
-<p>4. Click the devices tab from the menu on the left, or click <em>Connected</em> in the default homepage.</p>
-<blockquote>
-<p><strong>Note:</strong> If the activated device is not listed or if it is listed as unconnected, unplug and then plug back in the power of the AMT device. After succesfully restarting the device, refresh the WebUI to see if the <em>Status</em> changes to <em>Connected</em> and turns green.</p>
-</blockquote>
-<p><a href="../../assets/images/MPS_ConnectedDevice.png"><img alt="mps" src="../../assets/images/MPS_ConnectedDevice.png" /></a></p>
-<p>5. Select the checkbox by the connected device you want to manage.</p>
-<p>6. Select an action to perform from the options on the right.</p>
-<blockquote>
-<p><strong>Note:</strong> Since the device was activated in Client Control Mode(CCM), the KVM feature will not function in this current release. To use KVM, follow the <a href="../../Tutorials/acmActivation/">ACM Activation Tutorial</a> to see how to configure a device into Admin Control Mode.</p>
-<p><strong>Note:</strong> Activated in Admin Control Mode already? Try out the Keyboard, Video, Mouse (KVM) feature to remotely view and control the AMT device.  Issue a Reset to BIOS command and be able to view and make live changes to BIOS settings.</p>
-</blockquote>
-<p><a href="../../assets/images/MPS_ManageDevice.png"><img alt="mps" src="../../assets/images/MPS_ManageDevice.png" /></a></p>
-<p><br></p>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Explore:</p>
-<ul>
-<li><a href="../../Tutorials/apiTutorial/">REST API Calls to a Managed Device</a></li>
-<li><a href="../../Tutorials/uitoolkit/">The ActivEdge UI Toolkit</a> </li>
-<li><a href="../../security/">Security and Hardening Considerations</a></li>
-</ul>
-<p><br></p>
+<p>7. Provide your Development Device's IP address as the Common Name to generate the self-signed certificate by the MPS server.</p>
+<p>8. Leave Mps root certificate format to the default, Auto Load.</p>
+<p>9. Click Load under MPS Root Certificate.</p>
+<p>10. Click Create.</p>
+<p>Example CIRA Config:</p>
+<p><a href="../../assets/images/RPS_CreateCIRAConfig.png"><img alt="RPS" src="../../assets/images/RPS_CreateCIRAConfig.png" /></a></p>
+<h2 id="next-up">Next up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
+<p>Profiles provide configuration information to the AMT Firmware during the activation process with the Remote Provisioning Client (RPC). Profiles also distinguish between activating in: </p>
+<p><strong><a href="../createProfileCCM/">Create a Profile in Client Control Mode (CCM):</a></strong> This mode offers nearly all manageability features. However, it does not currently support Keyboard, Video, Mouse Control. For other features, such as Serial-Over-LAN or Storage Redirection (IDE-R, USB-R), user consent is required.</p>
+<p><strong><a href="../createProfileACM/">Create a Profile in Admin Control Mode (ACM):</a></strong> In a production environment, devices are typically activated in ACM mode. ACM mode enables KVM access to devices without user consent. In most IoT use cases, edge devices such as digital signage or kiosks may not have immediate access to it or employees nearby. ACM mode proves immensely helpful in these scenarios.</p>
                 
                   
                 
@@ -850,7 +841,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../buildRPC/" title="Build & Run RPC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../loginToRPS/" title="Login to RPS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -859,19 +850,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Build & Run RPC
+                Login to RPS
               </span>
             </div>
           </a>
         
         
-          <a href="../../Docker/dockerCloud/" title="Docker Images on the Cloud" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../createProfileCCM/" title="Create a Profile with CCM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker Images on the Cloud
+                Create a Profile with CCM
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
