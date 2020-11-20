@@ -507,8 +507,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    What You'll Do
+  <a href="#why-docker" class="md-nav__link">
+    Why Docker*?
   </a>
   
 </li>
@@ -518,26 +518,6 @@
     Clone the MPS and RPS Repositories
   </a>
   
-    <nav class="md-nav" aria-label="Clone the MPS and RPS Repositories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clone-mps" class="md-nav__link">
-    Clone MPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clone-rps" class="md-nav__link">
-    Clone RPS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -545,32 +525,12 @@
     Build the Docker Images
   </a>
   
-    <nav class="md-nav" aria-label="Build the Docker Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build-mps" class="md-nav__link">
-    Build MPS
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#build-rps" class="md-nav__link">
-    Build RPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#set-the-environment-variables" class="md-nav__link">
     Set the Environment Variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1810,8 +1770,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    What You'll Do
+  <a href="#why-docker" class="md-nav__link">
+    Why Docker*?
   </a>
   
 </li>
@@ -1821,26 +1781,6 @@
     Clone the MPS and RPS Repositories
   </a>
   
-    <nav class="md-nav" aria-label="Clone the MPS and RPS Repositories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clone-mps" class="md-nav__link">
-    Clone MPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clone-rps" class="md-nav__link">
-    Clone RPS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1848,32 +1788,12 @@
     Build the Docker Images
   </a>
   
-    <nav class="md-nav" aria-label="Build the Docker Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build-mps" class="md-nav__link">
-    Build MPS
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#build-rps" class="md-nav__link">
-    Build RPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#set-the-environment-variables" class="md-nav__link">
     Set the Environment Variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1909,45 +1829,40 @@
                 
                 
                 <h1 id="build-and-deploy-docker-images-for-mps-and-rps-locally">Build and Deploy Docker* Images for MPS and RPS Locally<a class="headerlink" href="#build-and-deploy-docker-images-for-mps-and-rps-locally" title="Permanent link">&para;</a></h1>
-<p>Management Presence Server (MPS) and Remote Provisioning Server (RPS)  provide support for deploying the services as Docker* images, standardized packages containing an application's source code, libraries, environment, and dependencies. </p>
-<p>A Docker container is the instantiation of a Docker image as a virtualized unit that separates the application from the environment. Docker* containers start and run reliably, securely, and portably inside different environments, eliminating some of the usual problems that occur with software deployment on varying platforms. </p>
+<p>The Open AMT Cloud Toolkit's <a href="../../Glossary/#m">Management Presence Server (MPS)</a> and <a href="../../Glossary/#r">Remote Provisioning Server (RPS)</a> provide support for deploying the microservices as <a href="../../Glossary/#d">Docker*</a> images, standardized packages containing an application's source code, libraries, environment, and dependencies. </p>
+<h2 id="why-docker">Why Docker*?<a class="headerlink" href="#why-docker" title="Permanent link">&para;</a></h2>
+<p>A Docker container is the instantiation of a Docker image as a virtualized unit that separates the application from the environment. Docker containers start and run reliably, securely, and portably inside different environments, eliminating some of the usual problems that occur with software deployment on varying platforms. </p>
 <p>Get more information about Docker images and containers at <a href="https://www.docker.com/resources/what-container">Docker resources.</a></p>
-<h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
-<p>This section describes how to deploy MPS and RPS as Docker* images on the development system:</p>
-<ol>
-<li>Clone the repositories.</li>
-<li>Build the images.</li>
-<li>Set the environment variables.</li>
-<li>Run the tool <a href="https://docs.docker.com/compose/">docker-compose</a> tool on a sample configuration file to define and enable a multi-container environment. </li>
-</ol>
 <h2 id="clone-the-mps-and-rps-repositories">Clone the MPS and RPS Repositories<a class="headerlink" href="#clone-the-mps-and-rps-repositories" title="Permanent link">&para;</a></h2>
-<p>Navigate to a directory of your choice for development.</p>
-<h3 id="clone-mps">Clone MPS<a class="headerlink" href="#clone-mps" title="Permanent link">&para;</a></h3>
-<p>1. Clone the MPS repository.</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/mps.git
+<p><strong>To clone the repositories:</strong></p>
+<p>1. Open a Command Prompt or Terminal and navigate to a directory of your choice for development.</p>
+<p><div class="highlight"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/mps.git
 </code></pre></div>
-<h3 id="clone-rps">Clone RPS<a class="headerlink" href="#clone-rps" title="Permanent link">&para;</a></h3>
-<p>1.Clone the RPS repository to the same parent directory as MPS.</p>
+2. Repeat to clone the RPS repository to the same parent directory as MPS.</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/open-amt-cloud-toolkit/rps.git
 </code></pre></div>
-<p>After the <code>git clone</code> commands complete, the parent directory will contain an MPS and RPS folder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not nest a microservice directory inside another microservice directory. The source code contains relative paths. The correct directory structure appears below, where <em>parent</em> is your installation directory.</p>
+</div>
 <div class="highlight"><pre><span></span><code>📦parent
  ┣ 📂mps
  ┗ 📂rps
 </code></pre></div>
-<p><br></p>
 <h2 id="build-the-docker-images">Build the Docker Images<a class="headerlink" href="#build-the-docker-images" title="Permanent link">&para;</a></h2>
-<p>Build the MPS and RPS Docker images from their respective directories with the <strong>build -t</strong> command, giving the image a name and tag:</p>
+<p>Build the MPS and RPS Docker images from their respective directories with the <code>build -t</code> command, giving the image a name and tag:</p>
 <p><a href="https://docs.docker.com/engine/reference/commandline/build/">docker build . -t [name:tag]</a>  </p>
+<p><strong>Create name and tags that:</strong></p>
 <ul>
-<li>Create a name and tag with lowercase letters, digits, and separators (i.e., underscores, periods, and dashes).</li>
-<li>Do not end a name or tag with a separator.</li>
-<li>Tags contain up to 128 characters.</li>
+<li>Contain lowercase letters, digits, and separators (i.e., underscores, periods, and dashes).</li>
+<li>Do not end with a separator.</li>
+<li>Contain up to 128 characters.</li>
 </ul>
-<blockquote>
-<p><strong>Note: Building a fresh Docker image may take several minutes.</strong> </p>
-</blockquote>
-<h3 id="build-mps">Build MPS<a class="headerlink" href="#build-mps" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Building a fresh Docker image may take several minutes.</p>
+</div>
+<p><strong>To build MPS:</strong></p>
 <ol>
 <li>Navigate to MPS folder and build the Docker image. </li>
 </ol>
@@ -1959,30 +1874,34 @@ docker build . -t mps:v1
 <p class="admonition-title">Note</p>
 <p>On completion, a security warning is normal during local setup with the default values for developer testing environments.</p>
 </div>
-<h3 id="build-rps">Build RPS<a class="headerlink" href="#build-rps" title="Permanent link">&para;</a></h3>
+<p><strong>To build RPS:</strong></p>
 <p>2. Navigate to the RPS folder and build the Docker image.</p>
 <p><div class="highlight"><pre><span></span><code>cd ..
 cd rps
 docker build . -t rps:v1
 </code></pre></div>
 <img alt="Image of RPS Build Completion" src="../../assets/images/RPSBuild.png" /> </p>
-<h3 id="set-the-environment-variables">Set the Environment Variables<a class="headerlink" href="#set-the-environment-variables" title="Permanent link">&para;</a></h3>
-<p>3. After building the new MPS and RPS images, navigate to the mps\scripts\docker-compose folder and copy the .env.template file to .env. </p>
+<h2 id="set-the-environment-variables">Set the Environment Variables<a class="headerlink" href="#set-the-environment-variables" title="Permanent link">&para;</a></h2>
+<p><strong>To set the environment variables:</strong></p>
+<p>1. After building the new MPS and RPS images, navigate to the <code>mps\scripts\docker-compose</code> folder and copy the .env.template file to <code>.env</code>. </p>
 <div class="highlight"><pre><span></span><code>cd ..
 cd mps/scripts/docker-compose
 </code></pre></div>
-<p>Windows Command:
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>copy .env.template .env
-</code></pre></div></p>
-<p>Linux Command:
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Linux</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>cp .env.template .env
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Preserve the .env.template file.</strong></p>
 <p>This file is very important to maintain. Always copy to a new file. </p>
 </div>
-<p>4. Open the .env file in a text editor. Set the image-related environment variables within the .env file.</p>
+<p>2. Open the .env file in a text editor. Set the image-related environment variables within the .env file.</p>
 <p>Change the following fields:</p>
 <table>
 <thead>
@@ -2054,7 +1973,7 @@ HTTPS_PROXY=http://10.16.01.01:3030
 <p>Since the vault is running in a dev mode, you will not be able to restart the vault and maintain the secrets stored since they are not persisted. You will need to recreate profiles and configs again. Be sure and run <code>docker-compose down -v</code> when bringing down the stack so as to remove the volumes and start fresh upon <code>docker-compose up</code>.  You may follow the guide <a href="../dockerLocal_prodVault/">here</a> to run vault in production mode.</p>
 </div>
 <h2 id="next-up">Next up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
-<p><a href="../../General/loginToRPS/">Login to RPS</a></p>
+<p><a href="../../General/loginToRPS/"><strong>Login to RPS</strong></a></p>
                 
               
               

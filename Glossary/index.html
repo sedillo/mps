@@ -1724,6 +1724,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    G
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#i" class="md-nav__link">
     I
   </a>
@@ -1860,63 +1867,66 @@
                 
                 
                 <h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h1>
-<p><a href="#a">A</a> | B | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a> | F | <a href="#g">G</a> | H | <a href="#i">I</a> | J | <a href="#k">K</a> | L | <a href="#m">M</a> | <a href="#n">N</a> | O | <a href="#p">P</a> | Q | <a href="#r">R</a> | S | T | <a href="#u">U</a> |<a href="#v">V</a> | <a href="#w">W</a> | X | Y | Z</p>
+<p>Open Active Management Technology (Open AMT) Cloud Toolkit, also referred to as (OAMTCT)
+<em>Related Terminology, Technologies, and Acronyms</em></p>
+<p><a href="#a">A</a> | <a href="#b">B</a> | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a> | F | <a href="#g">G</a> | H | <a href="#i">I</a> | J | <a href="#k">K</a> | L | <a href="#m">M</a> | <a href="#n">N</a> |<a href="#n">O</a> | <a href="#p">P</a> | Q | <a href="#r">R</a> | S | T | <a href="#u">U</a> |<a href="#v">V</a> | <a href="#w">W</a> | X | Y | Z</p>
 <h2 id="a">A<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
-<p><strong><a href="">Open Active Management Technology Cloud Toolkit:</a></strong> An open source software architecture consisting of modular microservices and libraries for integration of out-of-band manageability into exisiting network infrastructures. The software enables network administrators and ISVs to explore key Intel® Active Management Technology (Intel® AMT). It can also be referred to as Open AMT Cloud Toolkit.</p>
-<p><strong>admin control mode (ACM):</strong> A mode of provisioning Intel® AMT that requires a purchased provisioning certificate from a Certificate Authority (CA), the creation of a domain, and the creation of a profile in the Remote Provisioning Server (RPS) application. ACM achieves a higher level of trust than client control mode (CCM). See CCM and provisioning.</p>
-<p><strong>ACM Activation</strong>: The act of loading a purchased certificate and associating it with an AMT profile.</p>
-<p><strong>allowlist</strong>: A list permiting access to a privilege, service, network, etc.</p>
+<p><strong>admin control mode (ACM):</strong> A mode of provisioning Intel® AMT that requires a purchased provisioning certificate from a Certificate Authority (CA), the creation of a domain, and the creation of a profile in the Remote Provisioning Server (RPS) application. ACM achieves a higher level of trust than client control mode (CCM). This is the required mode for Keyboard, Video, Mouse (KVM) or Redirection without user consent. See also <a href="#c">CCM</a> and <a href="#p">provisioning</a>.</p>
+<p><strong>ACM Activation:</strong> The act of loading a purchased certificate and associating it with an OAMTCT profile.</p>
+<p><strong>allowlist:</strong> A list permitting access to a privilege, service, network, etc.</p>
 <h2 id="b">B<a class="headerlink" href="#b" title="Permanent link">&para;</a></h2>
+<p><strong>Basic Input/Output System (BIOS):</strong> Firmware that performs hardware initialization and configuration upon startup. See <a href="#m">MEBX</a>. </p>
 <h2 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <p><strong>certificate (provisioning):</strong> A digitally signed document used in the provisioning of an edge device featuring Intel® AMT. The Intel® AMT firmware is pre-loaded with Transport Layer Security (TLS) certificate thumbprints of different certificate vendors. A digital certificate binds the identity of the certificate holder to vendor-specific thumbprints. To provision an edge device, users must purchase a certificate from an approved vendor. </p>
 <p><strong>Client Initiated Remote Access (CIRA):</strong> An out-of-band (OOB) management communication protocol that network clients can use to initiate a secure connection with a server. </p>
-<p><strong>CIRA Config Control:</strong> </p>
-<p><strong>Client Control Mode (CCM)</strong>: An alternative to ACM provisioning mode that does not require a purchased certificate. Use this mode to setup the Open AMT Cloud Toolkit software features quickly.</p>
+<p><strong>Client Control Mode (CCM):</strong> An alternative to ACM provisioning mode that does not require a purchased certificate. Use this mode to set up OAMTCT software features quickly.</p>
 <p><strong>Container (Docker*):</strong> The instantiation, or running instance, of a Docker image.</p>
 <h2 id="d">D<a class="headerlink" href="#d" title="Permanent link">&para;</a></h2>
 <p><strong>development system:</strong> The system on which Management Presence Server (MPS) and Remote Provision Server (RPS) are installed.</p>
-<p><strong><a href="https://www.docker.com/">Docker*:</a></strong>  A platform that employs the idea of containerization, isolating a unit of software, such as an application, from its environment. Containerization creates applications as lightweight, discrete processes that can be deployed to the cloud as services. See Docker overview for more information. </p>
-<p><strong>DNS suffix:</strong> A suffix appended to the hostname of a DNS name.</p>
-<p><strong>domain suffix:</strong> The top-level portion (end) of a domain name (i.e., com, net, org).  </p>
+<p><strong>Docker*:</strong>  A platform that employs the idea of containerization, isolating a unit of software, such as an application, from its environment. Containerization creates applications as lightweight, discrete processes that can be deployed to the cloud as services. <a href="https://www.docker.com/">See Docker for more information.</a> </p>
+<p><strong>Domain Name System (DNS) suffix:</strong> A suffix appended to the hostname of a DNS name.</p>
+<p><strong>domain suffix:</strong> The top-level portion or end of a domain name (i.e., com, net, org).  </p>
 <h2 id="e">E<a class="headerlink" href="#e" title="Permanent link">&para;</a></h2>
-<p><strong>Edge Devices</strong>:  A device that serves as an entry point into an enterprise or service provider network. Edge devices include those related to banking, retail, hospitality, point-of-sale, etc. </p>
+<p><strong>Edge Devices:</strong>  A device or piece of hardware that serves as an entry point into an enterprise or service provider network. Edge devices include those related to banking, retail, hospitality, point-of-sale, etc. </p>
+<h2 id="g">G<a class="headerlink" href="#g" title="Permanent link">&para;</a></h2>
 <p><strong>Globally Unique Identifier (GUID):</strong> A 128-bit integer used to identify a system resource.</p>
 <h2 id="i">I<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<p><strong><a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-active-management-technology.html">Intel® Active Management Technology (Intel® AMT):</a></strong> A technology that provides out-of-band management and security features on an Intel vPro® platform.</p>
-<p><strong><a href="https://www.intel.com/content/www/us/en/architecture-and-technology/vpro/vpro-platform-general.html">Intel vPro® Platform:</a></strong> An Intel® platform created for business environments. Intel vPro® features Intel® Core™ i5 and Intel® Core™ i7 vPro® processors, built-in security features, and out-of-band manageability using Intel® AMT.</p>
+<p><strong>Intel® Active Management Technology (Intel® AMT):</strong> A technology that provides out-of-band management and security features on an Intel vPro® platform. <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-active-management-technology.html">See general overview of features.</a></p>
+<p><strong>Intel vPro® Platform:</strong> An Intel® platform created for business environments. Intel vPro® features Intel® Core™ i5 and Intel® Core™ i7 vPro® processors, built-in security features, and out-of-band manageability using Intel® AMT. <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/vpro/vpro-platform-general.html">See more about the platform.</a></p>
 <p><strong>Images (Docker*):</strong>  a set of instructions that determine the creation of an instantiated container  on a Docker platform.</p>
 <h2 id="k">K<a class="headerlink" href="#k" title="Permanent link">&para;</a></h2>
-<p><strong>Keyboard Video Mouse (KVM):</strong>  A technology, often a device, that allows a user to control multiple computers from a single keyboard, mouse, and video source.</p>
+<p><strong>Keyboard, Video, Mouse (KVM):</strong>  A technology, often a device, that allows a user to control multiple computers from a single keyboard, mouse, and video source.</p>
 <h2 id="l">L<a class="headerlink" href="#l" title="Permanent link">&para;</a></h2>
 <p><strong>lights-out management (LOM):</strong> See <a href="#o">out-of-band management</a>. </p>
 <h2 id="m">M<a class="headerlink" href="#m" title="Permanent link">&para;</a></h2>
-<p><strong>managed device:</strong> An Intel vPro® platform that features Intel® AMT and functions as an edge device.</p>
+<p><strong>managed (edge) device:</strong> An Intel vPro® platform that features Intel® AMT and functions as an edge device.</p>
 <p><strong>Manageability Engine BIOS Extensions (MEBX):</strong> A BIOS extension that enables the configuration of the Intel® AMT.</p>
-<p><strong>Management Presence Server (MPS):</strong> A microservice that resides on the development system and enables platforms featuring featuring Intel® AMT. The MPS receives client initiated remote access (CIRA) requests from the managed device. </p>
-<p><strong>microservice: </strong> A software unit or module of a microservice architecture. In the Open AMT Cloud Toolkit architecture, MPS and RPS are microservices residing on the development system. </p>
+<p><strong>Management Presence Server (MPS):</strong> A microservice that resides on the development system and enables platforms featuring featuring Intel® AMT. The MPS receives CIRA requests from the managed device. </p>
+<p><strong>microservice:</strong> A software unit or module of a microservice architecture. In OAMTCT architecture, MPS and RPS are microservices residing on the development system. </p>
 <p><strong>microservice architecture:</strong> An architecture in which the component parts are broken into discrete services, called microservices, that perform specific, limited functions. </p>
 <h2 id="n">N<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
-<p><strong><a href="https://nodejs.org/en">Node.js*:</a></strong> An open source JavaScript runtime created for asynchronous, event-driven backend network applications. </p>
+<p><strong>Node.js*:</strong> An open source JavaScript* runtime created for asynchronous, event-driven backend network applications. <a href="https://nodejs.org/en">See more about node.js.</a></p>
 <p><strong>Node Package Manager (npm):</strong>  a command line utility in node.js. The utility enables the management of packages, versions, and dependencies in node projects. </p>
 <h2 id="o">O<a class="headerlink" href="#o" title="Permanent link">&para;</a></h2>
-<p><strong>out-of-band (OOB) manageability:</strong> A remote management technology that allows administrators to perform actions on network assets or devices using a secure alernative to LAN-based communication protocols. Actions include reboot, power up, power down, system updates, and more. As long as the network device or asset is connected to power, the Open AMT Cloud Toolkit software can perform remote management, including powering up as system that is currently powered down. </p>
+<p><strong>Open Active Management Technology (Open AMT) Cloud Toolkit:</strong> An open source software architecture consisting of modular microservices and libraries for integration of out-of-band manageability into existing network infrastructures. The software enables network administrators and independent software vendors (ISVs) to explore key Intel® AMT features. <a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">See more about Open AMT Cloud Toolkit features.</a></p>
+<p><strong>out-of-band (OOB) manageability:</strong> A remote management technology that allows administrators to perform actions on network assets or devices using a secure alternative to LAN-based communication protocols. Actions include reboot, power up, power down, system updates, and more. As long as the network device or asset is connected to power, OAMTCT software can perform remote management, including powering up as system that is currently powered down. </p>
 <h2 id="p">P<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
-<p><strong>profile</strong>:  A set of configuration information, including a password and provisioning method, provided to Intel AMT firmware during the activation process. </p>
-<p><strong>provision or provisioning:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><strong>profile</strong>:  A set of configuration information, including a password and provisioning method, provided to Intel® AMT firmware during the activation process. </p>
+<p><strong>provision or provisioning:</strong> The act of setting up a remote client, system, or device, on a network using a digitally signed certificate as a security credential. </p>
 <h2 id="q">Q<a class="headerlink" href="#q" title="Permanent link">&para;</a></h2>
 <h2 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
-<p><strong>Remote Provision Client (RPC):</strong> A lightweight client application that resides on the managed device. The RPC communicates with the Managability Engine Interface (MEI) in the Management Engine (ME) driver to activate Intel AMT. </p>
+<p><strong>Remote Provision Client (RPC):</strong> A lightweight client application that resides on the managed device. The RPC communicates with the Manageability Engine Interface (MEI) in the Management Engine (ME) driver to activate Intel AMT. </p>
 <p><strong>Remote Provision Server (RPS):</strong> A node.js-based microservice that works with the Remote Provision Client (RPC) to activate Intel AMT using a pre-defined profile.</p>
-<p><strong>Representational State Transfer (REST) API</strong>: An architectural style or set of rules describing constraints that allow administrators and developers to take advantage of various Web services. in the context of the Open AMT Cloud Toolkit, administrators can construct REST API calls and run them with node, use provided REST code snippets to expand the reference implementation console, and use provided REST code snippets as a springboard for developing and expanding custom consoles.</p>
+<p><strong>REpresentational State Transfer (REST) API</strong>: An architectural style or set of rules describing constraints that allow administrators and developers to take advantage of various Web services. in the context of OAMTCT, administrators can construct REST API calls and run them with node, use provided REST code snippets to expand the reference implementation console, and use provided REST code snippets as a springboard for developing and expanding custom consoles.</p>
 <h2 id="s">S<a class="headerlink" href="#s" title="Permanent link">&para;</a></h2>
 <h2 id="t">T<a class="headerlink" href="#t" title="Permanent link">&para;</a></h2>
 <h2 id="u">U<a class="headerlink" href="#u" title="Permanent link">&para;</a></h2>
-<p><strong>UI Toolkit:</strong> A modular, REST-based API consisting of code snippets administrators can use to add Web services to the reference implentation console. </p>
+<p><strong>UI Toolkit:</strong> A modular, REST-based API consisting of code snippets administrators can use to add Web services to the reference implementation console. </p>
 <h2 id="v">V<a class="headerlink" href="#v" title="Permanent link">&para;</a></h2>
-<p><strong><a href="https://github.com/microsoft/vcpkg">vcpkg</a>:</strong> A command-line application that helps manage package creation and C and C++ libraries on Microsoft Windows, Linux, and MacOS.</p>
+<p><strong><a href="https://github.com/microsoft/vcpkg">vcpkg</a>:</strong> A command-line application that helps manage package creation and C and C++ libraries on Windows<em>, Linux</em>, and MacOS*.</p>
 <p><strong><a href="(https://deepsource.io/blog/setup-vault-kubernetes/#:~:text=Vault%20provides%20a%20Kubernetes%20authentication,vault%20auth%20enable%20kubernetes%20Success!)">Vault storage</a>:</strong> A service that manages encryption and storage of infrastructure secrets. </p>
 <h2 id="w">W<a class="headerlink" href="#w" title="Permanent link">&para;</a></h2>
-<p><strong>WebSocket:</strong> A communication protocol that enables persistent connnections and full-duplex communnication between clients and servers.</p>
+<p><strong>WebSocket*:</strong> A communication protocol that enables persistent connections and full-duplex communication between clients and servers.</p>
 <p><strong>Web Service Management (WS-MAN):</strong> A SOAP-based protocol for exchanging management data between network devices.</p>
 <h2 id="x">X<a class="headerlink" href="#x" title="Permanent link">&para;</a></h2>
 <h2 id="y">Y<a class="headerlink" href="#y" title="Permanent link">&para;</a></h2>

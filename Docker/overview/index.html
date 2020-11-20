@@ -495,16 +495,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-youll-need" class="md-nav__link">
     What You'll Need
   </a>
+  
+    <nav class="md-nav" aria-label="What You'll Need">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-system-software" class="md-nav__link">
+    Development System Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1756,16 +1769,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-youll-need" class="md-nav__link">
     What You'll Need
   </a>
+  
+    <nav class="md-nav" aria-label="What You'll Need">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-system-software" class="md-nav__link">
+    Development System Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1801,52 +1827,55 @@
                 
                 
                 <h1 id="build-and-deploy-microservices-with-local-docker-images">Build and Deploy Microservices with Local Docker* Images<a class="headerlink" href="#build-and-deploy-microservices-with-local-docker-images" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This section outlines the setup of the Open AMT Cloud Toolkit's microservices and client application. Take this path to install MPS and RPS as Docker images that will function as services on a local system or the cloud as in Figure 1.</p>
-<p><a href="../../assets/images/HelloWorldDocker.png"><img alt="Docker Local Overview" src="../../assets/images/HelloWorldDocker.png" /></a></p>
-<p><strong>Figure 1: Microservices deployed as Docker images</strong></p>
+<p>This section contains instructions for deploying the  Open AMT Cloud Toolkit's <a href="../../Glossary/#m">Management Presence Server (MPS)</a> and <a href="../../Glossary/#r">Remote Provisioning Server (RPS)</a> on a local development system as Docker* images. These Hello World deployment instructions detail how to install the microservices manually on a development system and are not intended as production environment instructions.</p>
+<p><a href="../../assets/images/LocalDockerWorkflow.png"><img alt="Docker Local Overview" src="../../assets/images/LocalDockerWorkflow.png" /></a></p>
+<p><strong>Figure 1: Deploy microservices on a local development system as Docker images. </strong></p>
 <h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
-<p><strong>Hardware</strong></p>
-<p>At minimum, to install and use the Open AMT Cloud Toolkit, a network configuration must include:</p>
+<h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
+<p><strong>Configure a network that includes:</strong></p>
 <ul>
 <li>A development system </li>
-<li>At least one Intel® vPro device</li>
+<li>At least one Intel vPro® device</li>
 <li>A flash drive or equivalent means to transfer files between</li>
 </ul>
 <p>Both systems must use a wired (i.e., cable) connection on the same network.</p>
-<p><strong>Software</strong></p>
-<p>The <strong>development system</strong> hosts Management Presence Server (MPS) and Remote Provisioning Server (RPS) and requires the following software:</p>
+<h3 id="development-system-software">Development System Software<a class="headerlink" href="#development-system-software" title="Permanent link">&para;</a></h3>
+<p><strong>Before MPS and RPS installation, install the following software:</strong></p>
 <ul>
-<li>
-<p><a href="https://www.docker.com/products/docker-desktop">Docker* Desktop</a> for Windows<em> or Linux</em></p>
-<p>Docker Configuration Details:</p>
-<ul>
-<li>The Docker for Windows installer defaults to enable all the required settings for this tutorial.</li>
-<li>After successful installation, the Docker icon (whale), will appear on the taskbar.</li>
-<li>To troubleshoot the installation, <a href="https:/docs.docker.com/docker-for-windows/troubleshoot/">see the troubleshooting guide</a>.</li>
+<li><a href="https://www.docker.com/products/docker-desktop">Docker* Desktop</a> for Windows<em> or Linux</em></li>
 </ul>
-</li>
-<li>
-<p><a href="https://www.google.com/chrome">Chrome* Browser</a></p>
-</li>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Docker Configuration Details: </strong>
+(1) The Docker for Windows installer defaults to enable all the required settings for this tutorial.
+(2) After successful installation, the Docker icon (whale), will appear on the task bar. 
+(3) To troubleshoot the installation, <a href="https:/docs.docker.com/docker-for-windows/troubleshoot/">see the troubleshooting guide</a>.</p>
+</div>
+<ul>
+<li><a href="https://www.google.com/chrome">Chrome* Browser</a></li>
 <li><a href="https://git-scm.com/downloads">git</a></li>
 </ul>
-<p>If using a Windows-based Development System, also requires:</p>
+<p><strong>If running Windows on the development system, also install:</strong></p>
 <ul>
 <li><a href="https://visualstudio.microsoft.com/">Microsoft Visual Studio*</a>: 2019 or newer version of Visual Studio Community/Professional</li>
 </ul>
 <h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
-<p>Follow the steps in these sections sequentially to deploy Docker* images on a local development system: </p>
+<p><strong>To complete a Hello World microservice deployment:</strong></p>
 <ul>
 <li>Build and Deploy Docker* Images Locally</li>
-<li>Configure RPS</li>
-<li>Build RPC on Managed Device</li>
-<li>Manage Device</li>
+<li>Login and Configure RPS</li>
+<li>Build RPC</li>
+<li>Copy RPC to a Managed Device</li>
 </ul>
-<p>Run instructions in these sections can use Microsoft Windows<em> or Linux</em> environments. The terminal may be A) the Windows Command Prompt in Administrator mode or B) the Linux* shell/terminal. </p>
+<p><strong>To connect the managed device:</strong></p>
+<ul>
+<li>Run RPC on a Managed Device</li>
+<li>Manage the Device with MPS</li>
+</ul>
+<p>These sections include instructions for Windows and Linux* environments. Run instructions in a terminal window, the Windows Command Prompt in Administrator mode or the Linux shell/terminal.</p>
 <p>Estimated completion time: <strong>15 minutes</strong></p>
 <h2 id="next-up">Next up<a class="headerlink" href="#next-up" title="Permanent link">&para;</a></h2>
-<p><a href="../dockerLocal/">Build Docker* Images</a></p>
+<p><a href="../dockerLocal/"><strong>Build Docker* Images</strong></a></p>
                 
               
               

@@ -1134,26 +1134,19 @@
     What You'll Need
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-docker-images" class="md-nav__link">
-    Build Docker Images
-  </a>
-  
-    <nav class="md-nav" aria-label="Build Docker Images">
+    <nav class="md-nav" aria-label="What You'll Need">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-mps" class="md-nav__link">
-    Build MPS
+  <a href="#hardware" class="md-nav__link">
+    Hardware
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-rps" class="md-nav__link">
-    Build RPS
+  <a href="#software" class="md-nav__link">
+    Software
   </a>
   
 </li>
@@ -1164,8 +1157,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    Deploy
+  <a href="#login-to-the-accounts" class="md-nav__link">
+    Login to the Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-repositories" class="md-nav__link">
+    Build the Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-images" class="md-nav__link">
+    Deploy the Images
   </a>
   
 </li>
@@ -1783,26 +1790,19 @@
     What You'll Need
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-docker-images" class="md-nav__link">
-    Build Docker Images
-  </a>
-  
-    <nav class="md-nav" aria-label="Build Docker Images">
+    <nav class="md-nav" aria-label="What You'll Need">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-mps" class="md-nav__link">
-    Build MPS
+  <a href="#hardware" class="md-nav__link">
+    Hardware
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-rps" class="md-nav__link">
-    Build RPS
+  <a href="#software" class="md-nav__link">
+    Software
   </a>
   
 </li>
@@ -1813,8 +1813,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    Deploy
+  <a href="#login-to-the-accounts" class="md-nav__link">
+    Login to the Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-repositories" class="md-nav__link">
+    Build the Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-images" class="md-nav__link">
+    Deploy the Images
   </a>
   
 </li>
@@ -1837,134 +1851,121 @@
                 
                 
                 <h1 id="build-docker-containers-for-mps-and-rps-and-deploy-to-the-cloud">Build Docker* Containers for MPS and RPS and Deploy to the Cloud<a class="headerlink" href="#build-docker-containers-for-mps-and-rps-and-deploy-to-the-cloud" title="Permanent link">&para;</a></h1>
-<p>Management Presence Server (MPS) and Remote Provisioning Server (RPS)  provide support for deploying the services as Docker* images to the cloud.</p>
+<p>The Open AMT Cloud Toolkit's <a href="../../Glossary/#m">Management Presence Server (MPS)</a> and <a href="../../Glossary/#r">Remote Provisioning Server (RPS)</a> provide support for deploying the microservices as <a href="../../Glossary/#d">Docker*</a> images to the cloud. </p>
 <h2 id="what-youll-do">What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">&para;</a></h2>
-<p>This tutorial explains the steps to deploy Management Presence Server (MPS) and Remote Provisioning Server (RPS) as Docker<em> images to the cloud using Microsoft Azure</em>:</p>
+<p>This tutorial explains the steps to deploy MPS and RPS as Docker images to the cloud using Microsoft Azure*:</p>
 <ol>
-<li>Create a Microsoft Azure subscription. </li>
+<li>Create a Microsoft Azure* subscription. </li>
 <li>Create a Docker Hub account. Supply it with a Docker ID which will be used later.</li>
 <li>Login to the accounts.</li>
 <li>Build and deploy to the cloud.</li>
 </ol>
 <h2 id="what-youll-need">What You'll Need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h2>
-<p><strong>Hardware</strong></p>
+<h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
+<p><strong>Configure a network that includes:</strong></p>
 <ul>
-<li>A development box </li>
-<li>At least one Intel® AMT device </li>
+<li>A development system running Windows® 10 or Ubuntu* 18.04 or newer </li>
+<li>At least one Intel vPro® device to manage</li>
 </ul>
-<p><strong>Software</strong></p>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<p><strong>Before  MPS and RPS installation, install or subscribe to the following software:</strong></p>
 <ul>
-<li><a href="https://azure.microsoft.com/en-us/free/search/?&amp;ef_id=EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE:G:s&amp;OCID=AID2100131_SEM_EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE:G:s&amp;gclid=EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE">Microsoft Azure Subscription and Login</a></li>
-</ul>
+<li>
+<p><a href="https://azure.microsoft.com/en-us/free/search/?&amp;ef_id=EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE:G:s&amp;OCID=AID2100131_SEM_EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE:G:s&amp;gclid=EAIaIQobChMIwNTKptLm6gIVAxLnCh3ESwcQEAAYASAAEgL8uPD_BwE">Microsoft Azure Subscription and Login</a></p>
 <p><strong>Microsoft Azure Configuration Details</strong> </p>
 <ul>
 <li>Create a subscription for Microsoft Azure. </li>
 <li>Download <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest">Microsoft Azure Command Line Interface (CLI)</a>.</li>
-<li>
-<p>Test the Microsoft Azure <a href="https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest">CLI login</a>.</p>
+<li>Test the Microsoft Azure <a href="https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest">CLI login</a></li>
+</ul>
 </li>
 <li>
 <p><a href="https://hub.docker.com/signup/">Docker Hub Account</a></p>
-</li>
-</ul>
 <p><strong>Docker Hub Account Configuration Details</strong></p>
 <ul>
 <li>Creating an account on Docker Hub requires the creation of a <strong>unique Docker ID</strong> consisting of 4 to 30 lowercase letters and digits. This ID becomes the <strong>user namespace</strong> for hosted services. The password and Docker ID will be used in the deployment instructions. </li>
 <li>A Docker Hub account enables user access to Docker Hub repositories, forums, support and more. </li>
-<li>
-<p>See detailed instructions for creating an account <a href="https://docs.docker.com/docker-id/">here</a>.</p>
+<li>See detailed instructions for creating an account <a href="https://docs.docker.com/docker-id/">here</a>.</li>
+</ul>
 </li>
 <li>
 <p><a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop on Windows</a></p>
-</li>
-</ul>
 <p><strong>Docker Configuration Details</strong></p>
 <ul>
 <li>The Docker for Windows installer defaults to enabling and running all the required settings necessary for this tutorial.</li>
 <li>After successful installation, the Docker icon (whale), appears on the task bar.</li>
 <li>To troubleshoot the installation, <a href="https://docs.docker.com/docker-for-windows/troubleshoot/">see the troubleshooting guide</a>.</li>
 </ul>
-<h2 id="build-docker-images">Build Docker Images<a class="headerlink" href="#build-docker-images" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Login to Microsoft Azure with the Azure CLI using the <strong>az</strong> command. Type the command in a Windows Command Prompt or Azure PowerShell.</li>
-</ol>
+</li>
+</ul>
+<h2 id="login-to-the-accounts">Login to the Accounts<a class="headerlink" href="#login-to-the-accounts" title="Permanent link">&para;</a></h2>
+<p><strong>To login:</strong></p>
+<p>1. Login to Microsoft Azure with the Azure CLI using the <strong>az</strong> command. Type the command in a Windows Command Prompt or Azure PowerShell.</p>
 <div class="highlight"><pre><span></span><code>az login
 </code></pre></div>
 <p>This command will invoke the default browser, which displays a login screen.</p>
-<ol>
-<li>Login to the Docker hub account with the Docker ID and password. [KD: Please place pix here.]</li>
-</ol>
+<p>2. Login to the Docker hub account with the Docker ID and password. [KD: Please place pix here.]</p>
 <div class="highlight"><pre><span></span><code>docker login --username [your Docker ID] --password [your Docker Hub Password]
 </code></pre></div>
-<h3 id="build-mps">Build MPS<a class="headerlink" href="#build-mps" title="Permanent link">&para;</a></h3>
+<h2 id="build-the-repositories">Build the Repositories<a class="headerlink" href="#build-the-repositories" title="Permanent link">&para;</a></h2>
 <p>Build the MPS and RPS Docker images from their respective directories with the <strong>build -t</strong> command, giving the image a name and tag:</p>
 <p><a href="https://docs.docker.com/engine/reference/commandline/build/">docker build -t [name:tag]</a>  </p>
 <ul>
 <li>Create a name and tag with lowercase letters, digits, and separators (i.e., underscores, periods, and dashes).</li>
 <li>Do not end a name or tag with a separator.</li>
-<li>
-<p>Tags contain up to 128 characters.</p>
-</li>
-<li>
-<p>Navigate to the MPS folder and build the Docker image. Execute a build and push for MPS. </p>
-</li>
+<li>Tags contain up to 128 characters.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Building a fresh Docker image may take several minutes.</p>
+</div>
+<p><strong>To build MPS:</strong></p>
+<p>1. Navigate to the MPS folder and build the Docker image. Execute a build and push for MPS. </p>
 <p>The <strong>docker push</strong> command with the -t or --tag option enables the naming and tagging of a build: </p>
 <p><a href="**https://docs.docker.com/engine/reference/commandline/push/**">docker push -t [docker-id][name:tag]</a></p>
 <div class="highlight"><pre><span></span><code>cd parent directory\mps
 docker build . -t  f30911230045\mps-microservice:v1
 docker push f30911230045\mps-microservice:v1
 </code></pre></div>
-<h3 id="build-rps">Build RPS<a class="headerlink" href="#build-rps" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Navigate to the RPS folder and build the Docker image. Execute a build and push for RPS. </li>
-</ol>
+<p><strong>To build the RPS:</strong></p>
+<p>2. Navigate to the RPS folder and build the Docker image. Execute a build and push for RPS. </p>
 <div class="highlight"><pre><span></span><code>cd ..\rps
 docker build . -t  f30911230032\rps-microservice:v1
 docker push f30911230032\rps-microservice:v1
 </code></pre></div>
-<h2 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h2>
-<ol>
-<li>After building the new MPS and RPS images, navigate to mps\scripts\docker-compose folder and use <strong>xcopy</strong> to copy the .env.template file to .env. </li>
-</ol>
-<p>The environment file .env.template contains the MPS and RPS environment variables to pass to the Docker engine.</p>
+<h2 id="deploy-the-images">Deploy the Images<a class="headerlink" href="#deploy-the-images" title="Permanent link">&para;</a></h2>
+<p><strong>To deploy to the cloud:</strong></p>
+<p>1. After building the new MPS and RPS images, navigate to <code>mps\scripts\docker-compose</code> folder and use <code>xcopy</code> to copy the .env.template file to <code>.env</code>. </p>
+<p>The environment file <code>.env.template</code> contains the MPS and RPS environment variables to pass to the Docker engine.</p>
 <div class="highlight"><pre><span></span><code>cd mps\scripts\docker-compose
 xcopy /Y .env.template .env
 </code></pre></div>
-<blockquote>
-<p><strong>NOTE: Preserve the .env.template file.</strong></p>
-<p>This file is very important to maintain. Always copy to a new file. </p>
-</blockquote>
-<ol>
-<li>Set the image-related environment variables within the .env file:</li>
-</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always preserve the .env.template file by copying it to a new file. </p>
+</div>
+<p>2. Set the image-related environment variables within the .env file:</p>
 <p>MPS_IMAGE=[name:tag from the build step]</p>
 <p>RPS_IMAGE=[name:tag from the build step]</p>
 <div class="highlight"><pre><span></span><code>MPS_IMAGE=mps-microservice:v1
 RPS_IMAGE=rps-microservice:v2
 </code></pre></div>
-<ol>
-<li>Set the proper proxy values if behind a proxy.</li>
-</ol>
+<p>3. Set the proper proxy values if behind a proxy.</p>
 <p>set HTTP_PROXY=http://[your-proxy-server]:[your-proxy-server-port]
 set HTTPS_PROXY=http://[your-proxy-server]:[your-proxy-server-port]</p>
 <div class="highlight"><pre><span></span><code>set HTTP_PROXY=http://10.3.4.52:8080
 set HTTPS_PROXY=http://10.3.4.52:8080
 </code></pre></div>
-<blockquote>
-<p><strong>NOTE:</strong>  If using a private Docker hub, set the password variable.</p>
-<p>DOCKER_LOGIN_PASSWORD=[your-docker-login-password</p>
-</blockquote>
-<ol>
-<li>
-<p>Run the oact-stack-azure-vm.bat file. This file: </p>
-</li>
-<li>
-<p>Installs the Docker on the Microsoft Azure VM</p>
-</li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If using a private Docker hub, set the password variable: DOCKER_LOGIN_PASSWORD=[your-docker-login-password</p>
+</div>
+<p>4. Run the oact-stack-azure-vm.bat file. This file: </p>
+<ul>
+<li>Installs the Docker on the Microsoft Azure VM</li>
 <li>Runs the <strong>docker-compose</strong> up command. </li>
 <li>Copies the .env-template file to .env.</li>
-</ol>
+</ul>
 <p>oact-stack-azure-vm.bat [your-solution-name] [region (e.g.,: westus)] [MPS-IMAGE] [RPS-IMAGE]</p>
 <div class="highlight"><pre><span></span><code>cd scripts\docker-compose
 oact-stack-azure-vm.bat vprodemo westus

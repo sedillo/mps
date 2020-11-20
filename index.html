@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#open-amt-cloud-toolkit-overview" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -1818,30 +1818,31 @@
                   </a>
                 
                 
-                <h1 id="open-amt-cloud-toolkit-overview">Open AMT Cloud Toolkit Overview<a class="headerlink" href="#open-amt-cloud-toolkit-overview" title="Permanent link">&para;</a></h1>
-<p>Intel vPro® platforms offer hardware-enhanced security features and remote manageability, also known as out-of-band manageability, using Intel® Active Management Technology (Intel&reg; AMT). With Intel&reg; AMT, administrators remotely manage, repair, and update network assets, such as systems and edge devices. In the event that a network asset is powered off or the operating system is unavailable, administrators can power on the asset. </p>
-<p>The Open AMT Cloud Toolkit provides open-source, modular microservices and libraries for integration of hardware provisioning, out-of-band manageability, and other Intel&reg; AMT features with both new and existing management consoles, software solutions, and more. As an open source implementation, the Open AMT Cloud Toolkit makes it easier for IT departments and ISVs to adopt, integrate, and customize out-of-band management solutions for Intel vPro® platforms.</p>
-<p>Read more about Intel&reg; AMT features and capabilities <a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">here</a>.</p>
+                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p><a href="Glossary/#o"><strong>Open Active Management Technology (Open AMT) Cloud Toolkit</strong></a> provides open-source, modular microservices and libraries for integration of hardware provisioning, <a href="Glossary/#o">out-of-band (OOB) manageability</a>, and other <a href="Glossary/#i">Intel® Active Management Technology (Intel® AMT)</a>. As an open source implementation, the toolkit makes it easier for IT departments and independent software vendors (ISVs) to adopt, integrate, and customize out-of-band management solutions for <a href="Glossary/#i">Intel vPro® platforms</a>.</p>
+<p><img alt="assets/images/OOBManagement.png" src="assets/images/OOBManagement.png" /></p>
+<p><strong>Figure 1: Open AMT Cloud Toolkit features out-of-band (OOB) management.</strong></p>
 <h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
-<p>The Open AMT Cloud Toolkit guides provide instructions to:</p>
+<p>The toolkit guide provides instructions to:</p>
 <ul>
-<li>Deploy the Management Presence Server (MPS) and Remote Provisioning Server (RPS) on the development system.</li>
-<li>Build and run Remote Provisioning client (RPC) on the managed device.</li>
+<li>Deploy the <a href="Glossary/#m">Management Presence Server (MPS)</a> and <a href="Glossary/#r">Remote Provisioning Server (RPS)</a> on the development system.</li>
+<li>Build and run <a href="Glossary/#r">Remote Provisioning Client (RPC)</a>on the managed device.</li>
 <li>Connect the managed device (edge device)</li>
 </ul>
-<p>Additional sections provide guidance on the reference implementation UI Toolkit, REST API usage, asset security, and more.</p>
+<p>Additional sections provide guidance on the reference implementation UI Toolkit, REST API usage, asset security, and more. </p>
 <p><img alt="assets/images/AEHighLevelArch.png" src="assets/images/AEHighLevelArch.png" /></p>
-<p><strong>Figure 1: Open AMT Cloud Toolkit High-level Architecture</strong></p>
-<p>As shown in Figure 1, Open AMT Cloud Toolkit high-level architecture consists of four components:</p>
+<p><strong>Figure 2: High-level architecture consists of four major software components.</strong></p>
+<p>As shown in Figure 2, Open AMT Cloud Toolkit high-level architecture consists of four components:</p>
 <ol>
-<li><strong>MPS</strong> - A microservice that utilizes an Intel vPro&reg; feature, Client Initiated Remote Access (CIRA), for enabling edge, cloud devices to maintain a persistent connection for out-of-band manageability features, such as power control or KVM control.</li>
-<li><strong>RPS</strong> - A microservice that activates Intel&reg; AMT-based platforms using pre-defined profiles and connects them to the MPS for manageability use cases.</li>
-<li><strong>RPC</strong> - A lightweight client application that communicates with the RPS server to activate Intel&reg; AMT.</li>
-<li><strong>UI Toolkit</strong> - A Toolkit that includes prebuilt React components and a reference implementation web console. The React-based snippets simplify the task of adding complex manageability-related UI controls, such as the Keyboard, Video, Mouse (KVM), to a console.</li>
+<li><strong>MPS</strong> - A microservice that uses an Intel vPro® platform feature, Client Initiated Remote Access (CIRA), for enabling edge, cloud devices to maintain a persistent connection for out-of-band manageability features, such as power control or Keyboard, Video, Mouse (KVM) control.</li>
+<li><strong>RPS</strong> - A microservice that activates Intel® AMT platforms using predefined profiles and connects them to the MPS for manageability use cases.</li>
+<li><strong>RPC</strong> - A lightweight client application that communicates with the RPS server to activate Intel® AMT.</li>
+<li><strong>UI Toolkit</strong> - A toolkit that includes prebuilt React components and a reference implementation web console. The React-based snippets simplify the task of adding complex manageability-related UI controls, such as the KVM, to a console. </li>
 </ol>
+<p>Integrate the Open AMT Cloud Toolkit into new and existing management consoles, software solutions, and more.</p>
 <h2 id="open-amt-cloud-toolkit-setup">Open AMT Cloud Toolkit Setup<a class="headerlink" href="#open-amt-cloud-toolkit-setup" title="Permanent link">&para;</a></h2>
 <h3 id="build-and-deploy-microservices-locally">Build and Deploy Microservices Locally<a class="headerlink" href="#build-and-deploy-microservices-locally" title="Permanent link">&para;</a></h3>
-<p>If unfamiliar with Docker, choose this setup option to accomplish a manual, local installation of microservices. </p>
+<p>If unfamiliar with Docker*, choose this setup option to accomplish a manual, local installation of microservices. </p>
 <p><a class="md-button md-button--primary" href="Local/overview/">Get Started with Local Microservices</a></p>
 <p>Estimated completion time: <strong>Approximately 15 minutes</strong></p>
 <h3 id="build-and-deploy-microservices-with-local-docker-images">Build and Deploy Microservices with Local Docker* Images<a class="headerlink" href="#build-and-deploy-microservices-with-local-docker-images" title="Permanent link">&para;</a></h3>
@@ -1853,7 +1854,7 @@
 <h2 id="additional-intel-amt-resources">Additional Intel® AMT Resources<a class="headerlink" href="#additional-intel-amt-resources" title="Permanent link">&para;</a></h2>
 <p>For additional information about Intel® AMT, see the following links:</p>
 <ul>
-<li><a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">Intel® vPro Overview</a></li>
+<li><a href="https://software.intel.com/content/www/us/en/develop/topics/iot/hardware/vpro-platform-retail.html">Intel vPro® Platform Overview</a></li>
 <li><a href="https://www.intel.com/content/www/us/en/support/articles/000026592/technologies.html">Video Link</a></li>
 <li><a href="https://software.intel.com/en-us/articles/getting-started-with-intel-active-management-technology-amt">Detailed Setup document</a></li>
 </ul>
