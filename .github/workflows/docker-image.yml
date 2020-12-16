@@ -24,7 +24,7 @@ jobs:
 
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/mps:v1
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/mps:latest
 
     - name: Push the Docker image to ${{ secrets.DOCKER_USERNAME }}
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/mps:v1
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/mps:latest
